@@ -1,0 +1,18 @@
+#<IfModule mod_rewrite.c>
+#  RewriteEngine On
+#  RewriteBase /
+#  RewriteCond %{REQUEST_FILENAME} !-d
+#  RewriteCond %{REQUEST_FILENAME} !-f
+#  RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+#</IfModule>
+
+RewriteEngine On
+RewriteBase /phonebook/
+    RewriteCond %{REQUEST_URI} ^system.*
+    RewriteRule ^(.*)$ ./index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ ./index.php?/$1 [L]
+#RewriteCond $1 !^(index\.php|images|robots\.txt)
+#RewriteRule ^(.*)$ ./index.php/?$1 [L]
