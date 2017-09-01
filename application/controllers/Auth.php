@@ -14,16 +14,12 @@ class Auth extends CI_Controller {
         }
     }
 
-    /**
-     *     Sara1984      
-     */
+
     public function index() {
         redirect(base_url('auth/login'));
     }
 
-    /**
-     *           
-     */
+
     public function login() {
         $data['title'] = 'Login';
         $this->load->model('auth_model');
@@ -47,18 +43,14 @@ class Auth extends CI_Controller {
             exit;
         }
 
-        /*
-         * Load view
-         */
+
         $this->load->view('auth/includes/header', $data);
         $this->load->view('auth/includes/navbar');
         $this->load->view('auth/login');
         $this->load->view('auth/includes/footer');
     }
 
-    /**
-     *           
-     */
+
     public function register() {
         $data['title'] = 'Register';
         $this->load->model('auth_model');
@@ -88,9 +80,6 @@ class Auth extends CI_Controller {
         }
 
 
-        /*
-         * Load view
-         */
         $this->load->view('auth/includes/header', $data);
         $this->load->view('auth/includes/navbar');
         $this->load->view('auth/register');
@@ -125,18 +114,14 @@ class Auth extends CI_Controller {
             }
         }
 
-        /*
-         * Load view
-         */
+
         $this->load->view('auth/includes/header', $data);
         $this->load->view('auth/includes/navbar');
         $this->load->view('auth/forgot_password');
         $this->load->view('auth/includes/footer');
     }
 
-    /*
-     * Custom callback function
-     */
+
 
     public function password_check($str) {
         if (preg_match('#[0-9]#', $str) && preg_match('#[a-zA-Z]#', $str)) {
@@ -145,9 +130,7 @@ class Auth extends CI_Controller {
         return false;
     }
     
-        /*
-     * 
-     */
+
 
     public function logout() {
         $this->session->unset_userdata('logged_in');

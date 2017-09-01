@@ -3,12 +3,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Utils {
-    /* =========================================================================
+    /* Simple password hasher, seasoned with salt.
+     *
      * @param string $algo The algorithm (md5, sha1, whirlpool, etc)
      * @param string $data The data to encode
      * @param string $salt The salt (This should be the same throughout the system probably)
      * @return string The hashed/salted data
-      ======================================================================== */
+     */
 
     public static function hash($algo, $data, $salt) {
         $context = hash_init($algo, HASH_HMAC, $salt);
@@ -16,9 +17,9 @@ class Utils {
         return hash_final($context);
     }
 
-    /* =========================================================================
-      Clear the old cache (usage optional)
-      ======================================================================= */
+    /*
+     *  Disposes of caching - overkill for project of this scope
+     */
 
     public static function no_cache() {
         $ci = & get_instance();
