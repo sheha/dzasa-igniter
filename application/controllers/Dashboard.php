@@ -18,18 +18,12 @@ class Dashboard extends CI_Controller {
         
     }
 
-    /*
-     * 
-     */
-
     public function index() {
         $data['title'] = 'Dashboard';
         
         
         $data['session_user'] = $this->session_user;
-        /*
-         * Load view
-         */
+
         $this->load->view('includes/header', $data);
         $this->load->view('includes/navbar');
         $this->load->view('dashboard/index');

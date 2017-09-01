@@ -8,9 +8,6 @@ class Auth_model extends CI_Model {
         parent::__construct();
     }
 
-    /*
-     * 
-     */
 
     public function Authentification() {
         $notif = array();

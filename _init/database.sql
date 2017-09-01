@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `pbook`.`persons` (
   `gender` enum('male','female') DEFAULT NULL,
   `address` varchar(200) DEFAULT NULL,
   `dob` date DEFAULT NULL,
+  `photo` varchar(255) DEFAULT NULL,
   `user_id` INT,
   INDEX in_pbook ( `user_id` ),
   -- keep it clean for this demo project, no permanent storage

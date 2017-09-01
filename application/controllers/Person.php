@@ -1,87 +1,98 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Person extends CI_Controller {
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); class Person_model extends CI_Model {     var $table = 'persons';     var $column_order = array('firstname','lastname','gender','address','dob',null); //set column field database for datatable orderable     var $column_search = array('firstname','lastname','address'); //set column field database for datatable searchable just firstname , lastname , address are searchable     var $order = array('id' => 'desc'); // default order
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('person_model','person');
+		$this->load->database();
 	}
 
-	public function index()
+	private function _get_datatables_query()
 	{
-		$this->load->helper('url');
-		$this->load->view('person_view');
-	}
 
-	public function ajax_list()
-	{
-		$list = $this->person->get_datatables();
-		$data = array();
-		$no = $_POST['start'];
-		foreach ($list as $person) {
-			$no++;
-			$row = array();
-			$row[] = $person->firstName;
-			$row[] = $person->lastName;
-			$row[] = $person->gender;
-			$row[] = $person->address;
-			$row[] = $person->dob;
+		$this->db->from($this->table);
 
-			//add html for action
-			$row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_person('."'".$person->id."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
-                  <a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$person->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+		$i = 0;
 
-			$data[] = $row;
+		foreach ($this->column_search as $item) // loop column
+		{
+			if($_POST['search']['value']) // if datatable send POST for search
+			{
+
+				if($i===0) // first loop
+				{
+					$this->db->group_start(); // open bracket. query Where with OR clause better with bracket. because maybe can combine with other WHERE with AND.
+					$this->db->like($item, $_POST['search']['value']);
+				}
+				else
+				{
+					$this->db->or_like($item, $_POST['search']['value']);
+				}
+
+				if(count($this->column_search) - 1 == $i) //last loop
+					$this->db->group_end(); //close bracket
+			}
+			$i++;
 		}
 
-		$output = array(
-			"draw" => $_POST['draw'],
-			"recordsTotal" => $this->person->count_all(),
-			"recordsFiltered" => $this->person->count_filtered(),
-			"data" => $data,
-		);
-		//output to json format
-		echo json_encode($output);
+		if(isset($_POST['order'])) // here order processing
+		{
+			$this->db->order_by($this->column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+		}
+		else if(isset($this->order))
+		{
+			$order = $this->order;
+			$this->db->order_by(key($order), $order[key($order)]);
+		}
 	}
 
-	public function ajax_edit($id)
+	function get_datatables()
 	{
-		$data = $this->person->get_by_id($id);
-		echo json_encode($data);
+		$this->_get_datatables_query();
+		if($_POST['length'] != -1)
+			$this->db->limit($_POST['length'], $_POST['start']);
+		$query = $this->db->get();
+		return $query->result();
 	}
 
-	public function ajax_add()
+	function count_filtered()
 	{
-		$data = array(
-			'firstName' => $this->input->post('firstName'),
-			'lastName' => $this->input->post('lastName'),
-			'gender' => $this->input->post('gender'),
-			'address' => $this->input->post('address'),
-			'dob' => $this->input->post('dob'),
-		);
-		$insert = $this->person->save($data);
-		echo json_encode(array("status" => TRUE));
+		$this->_get_datatables_query();
+		$query = $this->db->get();
+		return $query->num_rows();
 	}
 
-	public function ajax_update()
+	public function count_all()
 	{
-		$data = array(
-			'firstName' => $this->input->post('firstName'),
-			'lastName' => $this->input->post('lastName'),
-			'gender' => $this->input->post('gender'),
-			'address' => $this->input->post('address'),
-			'dob' => $this->input->post('dob'),
-		);
-		$this->person->update(array('id' => $this->input->post('id')), $data);
-		echo json_encode(array("status" => TRUE));
+		$this->db->from($this->table);
+		return $this->db->count_all_results();
 	}
 
-	public function ajax_delete($id)
+	public function get_by_id($id)
 	{
-		$this->person->delete_by_id($id);
-		echo json_encode(array("status" => TRUE));
+		$this->db->from($this->table);
+		$this->db->where('id',$id);
+		$query = $this->db->get();
+
+		return $query->row();
 	}
+
+	public function save($data)
+	{
+		$this->db->insert($this->table, $data);
+		return $this->db->insert_id();
+	}
+
+	public function update($where, $data)
+	{
+		$this->db->update($this->table, $data, $where);
+		return $this->db->affected_rows();
+	}
+
+	public function delete_by_id($id)
+	{
+		$this->db->where('id', $id);
+		$this->db->delete($this->table);
+	}
+
 
 }
