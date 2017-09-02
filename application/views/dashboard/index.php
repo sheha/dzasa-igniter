@@ -2,7 +2,7 @@
 
 <div class="container" id="main">
 
-    <h1>Home page</h1>
+    <h1>Persons Dashboard</h1>
 
 </div>
 

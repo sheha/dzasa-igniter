@@ -1,98 +1,197 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); class Person_model extends CI_Model {     var $table = 'persons';     var $column_order = array('firstname','lastname','gender','address','dob',null); //set column field database for datatable orderable     var $column_search = array('firstname','lastname','address'); //set column field database for datatable searchable just firstname , lastname , address are searchable     var $order = array('id' => 'desc'); // default order
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-	public function __construct()
-	{
+class Person extends CI_Controller {
+	public function __construct() {
 		parent::__construct();
-		$this->load->database();
+		$this->load->model('person_model','person');
+}
+
+	public function index()
+	{
+		$this->load->view('person_view');
 	}
 
-	private function _get_datatables_query()
+	public function ajax_list()
 	{
+		$this->load->helper('url');
 
-		$this->db->from($this->table);
+		$list = $this->person->get_datatables();
+		$data = array();
+		$no = $_POST['start'];
+		foreach ($list as $person) {
+			$no++;
+			$row = array();
+			$row[] = $person->firstName;
+			$row[] = $person->lastName;
+			$row[] = $person->gender;
+			$row[] = $person->address;
+			$row[] = $person->dob;
+			if($person->photo)
+				$row[] = '<a href="'.base_url('upload/'.$person->photo).'" target="_blank"><img src="'.base_url('upload/'.$person->photo).'" class="img-responsive" /></a>';
+			else
+				$row[] = '(No photo)';
 
-		$i = 0;
+			//add html for action
+			$row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_person('."'".$person->id."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+                  <a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$person->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
 
-		foreach ($this->column_search as $item) // loop column
-		{
-			if($_POST['search']['value']) // if datatable send POST for search
-			{
-
-				if($i===0) // first loop
-				{
-					$this->db->group_start(); // open bracket. query Where with OR clause better with bracket. because maybe can combine with other WHERE with AND.
-					$this->db->like($item, $_POST['search']['value']);
-				}
-				else
-				{
-					$this->db->or_like($item, $_POST['search']['value']);
-				}
-
-				if(count($this->column_search) - 1 == $i) //last loop
-					$this->db->group_end(); //close bracket
-			}
-			$i++;
+			$data[] = $row;
 		}
 
-		if(isset($_POST['order'])) // here order processing
+		$output = array(
+			"draw" => $_POST['draw'],
+			"recordsTotal" => $this->person->count_all(),
+			"recordsFiltered" => $this->person->count_filtered(),
+			"data" => $data,
+		);
+		//output to json format
+		echo json_encode($output);
+	}
+
+	public function ajax_edit($id)
+	{
+		$data = $this->person->get_by_id($id);
+		$data->dob = ($data->dob == '0000-00-00') ? '' : $data->dob; // if 0000-00-00 set tu empty for datepicker compatibility
+		echo json_encode($data);
+	}
+
+	public function ajax_add()
+	{
+		$this->_validate();
+
+		$data = array(
+			'firstName' => $this->input->post('firstName'),
+			'lastName' => $this->input->post('lastName'),
+			'gender' => $this->input->post('gender'),
+			'address' => $this->input->post('address'),
+			'dob' => $this->input->post('dob'),
+		);
+
+		if(!empty($_FILES['photo']['name']))
 		{
-			$this->db->order_by($this->column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+			$upload = $this->_do_upload();
+			$data['photo'] = $upload;
 		}
-		else if(isset($this->order))
+
+		$insert = $this->person->save($data);
+
+		echo json_encode(array("status" => TRUE));
+	}
+
+	public function ajax_update()
+	{
+		$this->_validate();
+		$data = array(
+			'firstName' => $this->input->post('firstName'),
+			'lastName' => $this->input->post('lastName'),
+			'gender' => $this->input->post('gender'),
+			'address' => $this->input->post('address'),
+			'dob' => $this->input->post('dob'),
+		);
+
+		if($this->input->post('remove_photo')) // if remove photo checked
 		{
-			$order = $this->order;
-			$this->db->order_by(key($order), $order[key($order)]);
+			if(file_exists('upload/'.$this->input->post('remove_photo')) && $this->input->post('remove_photo'))
+				unlink('upload/'.$this->input->post('remove_photo'));
+			$data['photo'] = '';
+		}
+
+		if(!empty($_FILES['photo']['name']))
+		{
+			$upload = $this->_do_upload();
+
+			//delete file
+			$person = $this->person->get_by_id($this->input->post('id'));
+			if(file_exists('upload/'.$person->photo) && $person->photo)
+				unlink('upload/'.$person->photo);
+
+			$data['photo'] = $upload;
+		}
+
+		$this->person->update(array('id' => $this->input->post('id')), $data);
+		echo json_encode(array("status" => TRUE));
+	}
+
+	public function ajax_delete($id)
+	{
+		//delete file
+		$person = $this->person->get_by_id($id);
+		if(file_exists('upload/'.$person->photo) && $person->photo)
+			unlink('upload/'.$person->photo);
+
+		$this->person->delete_by_id($id);
+		echo json_encode(array("status" => TRUE));
+	}
+
+	private function _do_upload()
+	{
+		$config['upload_path']          = 'upload/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 100; //set max size allowed in Kilobyte
+		$config['max_width']            = 1000; // set max width image allowed
+		$config['max_height']           = 1000; // set max height allowed
+		$config['file_name']            = round(microtime(true) * 1000); //just milisecond timestamp fot unique name
+
+		$this->load->library('upload', $config);
+
+		if(!$this->upload->do_upload('photo')) //upload and validate
+		{
+			$data['inputerror'][] = 'photo';
+			$data['error_string'][] = 'Upload error: '.$this->upload->display_errors('',''); //show ajax error
+			$data['status'] = FALSE;
+			echo json_encode($data);
+			exit();
+		}
+		return $this->upload->data('file_name');
+	}
+
+	private function _validate()
+	{
+		$data = array();
+		$data['error_string'] = array();
+		$data['inputerror'] = array();
+		$data['status'] = TRUE;
+
+		if($this->input->post('firstName') == '')
+		{
+			$data['inputerror'][] = 'firstName';
+			$data['error_string'][] = 'First name is required';
+			$data['status'] = FALSE;
+		}
+
+		if($this->input->post('lastName') == '')
+		{
+			$data['inputerror'][] = 'lastName';
+			$data['error_string'][] = 'Last name is required';
+			$data['status'] = FALSE;
+		}
+
+		if($this->input->post('dob') == '')
+		{
+			$data['inputerror'][] = 'dob';
+			$data['error_string'][] = 'Date of Birth is required';
+			$data['status'] = FALSE;
+		}
+
+		if($this->input->post('gender') == '')
+		{
+			$data['inputerror'][] = 'gender';
+			$data['error_string'][] = 'Please select gender';
+			$data['status'] = FALSE;
+		}
+
+		if($this->input->post('address') == '')
+		{
+			$data['inputerror'][] = 'address';
+			$data['error_string'][] = 'Addess is required';
+			$data['status'] = FALSE;
+		}
+
+		if($data['status'] === FALSE)
+		{
+			echo json_encode($data);
+			exit();
 		}
 	}
-
-	function get_datatables()
-	{
-		$this->_get_datatables_query();
-		if($_POST['length'] != -1)
-			$this->db->limit($_POST['length'], $_POST['start']);
-		$query = $this->db->get();
-		return $query->result();
-	}
-
-	function count_filtered()
-	{
-		$this->_get_datatables_query();
-		$query = $this->db->get();
-		return $query->num_rows();
-	}
-
-	public function count_all()
-	{
-		$this->db->from($this->table);
-		return $this->db->count_all_results();
-	}
-
-	public function get_by_id($id)
-	{
-		$this->db->from($this->table);
-		$this->db->where('id',$id);
-		$query = $this->db->get();
-
-		return $query->row();
-	}
-
-	public function save($data)
-	{
-		$this->db->insert($this->table, $data);
-		return $this->db->insert_id();
-	}
-
-	public function update($where, $data)
-	{
-		$this->db->update($this->table, $data, $where);
-		return $this->db->affected_rows();
-	}
-
-	public function delete_by_id($id)
-	{
-		$this->db->where('id', $id);
-		$this->db->delete($this->table);
-	}
-
 
 }

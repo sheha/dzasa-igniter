@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> 
             </button>
-            <a href="<?php echo site_url('dashboard');?>" class="navbar-brand">My Application</a>
+            <a href="<?php echo site_url('dashboard');?>" class="navbar-brand">Phone Book, Ismar Sehic</a>
         </div>
         
         <div class="collapse navbar-collapse">

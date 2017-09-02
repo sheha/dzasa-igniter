@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Person_model extends CI_Model {
 
 	var $table = 'persons';
-	var $column_order = array('firstname','lastname','gender','address','dob',null); //set column field database for datatable orderable
-	var $column_search = array('firstname','lastname','address'); //set column field database for datatable searchable just firstname , lastname , address are searchable
-	var $order = array('id' => 'desc'); // default order
+	var $column_order = array('firstname','lastname','gender','address','dob',null);
+	var $column_search = array('firstname','lastname','address');
+	var $order = array('id' => 'desc');
 
 	public function __construct()
 	{
@@ -28,7 +28,7 @@ class Person_model extends CI_Model {
 
 				if($i===0) // first loop
 				{
-					$this->db->group_start(); // open bracket. query Where with OR clause better with bracket. because maybe can combine with other WHERE with AND.
+					$this->db->group_start();
 					$this->db->like($item, $_POST['search']['value']);
 				}
 				else
