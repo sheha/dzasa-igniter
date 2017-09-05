@@ -1,20 +1,40 @@
 <?php defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
 
 class Person extends CI_Controller {
+
+	var $session_user;
 	public function __construct() {
 		parent::__construct();
+
+		Utils::no_cache();
+
+		if ( ! $this->session->userdata('logged_in') ) {
+			redirect(base_url('auth/login'));
+			exit;
+		}
+		$this->session_user = $this->session->userdata('logged_in');
+
+		$user_id = $this->session->userdata('users_id') ?? null;
+
+		if ( ! isset( $user_id  )) {
+
+			show_error('No user id in session. Aborting!');
+			exit;
+		}
+
 		$this->load->model( 'person_model', 'person' );
+
+
 	}
 
 	public function index() {
-		$this->load->helper( 'url' );
 		$this->load->view( 'person_view' );
 	}
 
 	public function ajax_list() {
 		$this->load->helper( 'url' );
 
-		$list = $this->person->get_datatables();
+		$list = $this->person->get_datatables( $this->current_users_id );
 		$data = array();
 		$no   = $_POST['start'];
 		foreach ( $list as $person ) {

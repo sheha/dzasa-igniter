@@ -1,15 +1,24 @@
 <?php
 
-if (!defined('BASEPATH')) exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
+/*
+ * Class Auth_model : Basic auth model - defines authentication properties,
+ * checking and registering methods.
+ */
 class Auth_model extends CI_Model {
 
     function __construct() {
         parent::__construct();
     }
 
-
+	/*
+	 * Main auth method.Will check for the given email/pass combination,
+	 * and return the session object with account data if found, otherwise
+	 * returns 'account disabled' or 'account doesn't exist'
+	 */
     public function Authentification() {
+
         $notif = array();
         $email = $this->input->post('email');
         $password = Utils::hash('sha1', $this->input->post('password'), AUTH_SALT);
@@ -55,7 +64,7 @@ class Auth_model extends CI_Model {
     }
 
     /*
-     * 
+     * Function covering registration process
      */
 
     public function register() {
@@ -81,7 +90,7 @@ class Auth_model extends CI_Model {
     }
 
     /*
-     * 
+     * Check if the input email exists
      */
 
     public function check_email($email) {
@@ -92,6 +101,28 @@ class Auth_model extends CI_Model {
             return $row;
         }
         return null;
+    }
+
+    public function check_get_user_creds($email, $password = null ){
+
+    	$result = null;
+
+    	$this->db->select('*');
+	    $this->db->from('users');
+	    $this->db->where('email', $email);
+
+	    if ( isset( $password ) ) {
+
+	    	$this->db->where('password', $password);
+	    	$this->db->limit(1);
+
+	    	return $this->db->get();
+	    }
+
+	    $query = $this->db->get();
+
+	    return $result = ( $query->num_rows() > 0 ) ? $query->row() : $result ;
+
     }
 
 }

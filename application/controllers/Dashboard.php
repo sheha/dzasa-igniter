@@ -8,20 +8,21 @@ class Dashboard extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-
+		// no-cache headers
         Utils::no_cache();
+        // redirect to login if unregistered
         if (!$this->session->userdata('logged_in')) {
             redirect(base_url('auth/login'));
             exit;
         }
+        //set session data to logged in
         $this->session_user = $this->session->userdata('logged_in');
         
     }
 
     public function index() {
+
         $data['title'] = 'Dashboard';
-        
-        
         $data['session_user'] = $this->session_user;
 
         $this->load->view('includes/header', $data);

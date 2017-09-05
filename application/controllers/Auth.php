@@ -87,11 +87,13 @@ class Auth extends CI_Controller {
     }
 
     /**
-     *           
+     *   Sends the email
      */
     public function forgot_password() {
         $data['title'] = 'Forgot password';
         $this->load->model('auth_model');
+        // loads up the phpmailer based CI extension ( https://github.com/ivantcholakov/codeigniter-phpmailer )
+	    $this->load->library('email');
 
         if (count($_POST)) {
             $this->load->helper('security');
@@ -139,5 +141,6 @@ class Auth extends CI_Controller {
         $this->output->set_header("Pragma: no-cache");
         redirect(base_url('auth/login'));
     }
+
 
 }

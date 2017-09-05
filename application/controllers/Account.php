@@ -2,6 +2,9 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/*
+ *  Account Controller class: Basic Account management ops
+ */
 class Account extends CI_Controller {
 
     var $session_user;
@@ -37,7 +40,6 @@ class Account extends CI_Controller {
         $this->load->view('profile/change_password');
         $this->load->view('includes/footer');
     }
-
 
     /*
      * 

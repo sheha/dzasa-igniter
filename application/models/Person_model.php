@@ -1,6 +1,13 @@
 <?php defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
 
+/*
+ * Person model, or plainly, model of one record in our phonebook.
+ * Defines the getter and setters method for the
+ * entry in the phonebook.
+ */
+
 class Person_model extends CI_Model {
+
 
 	var $table = 'persons';
 
@@ -10,7 +17,7 @@ class Person_model extends CI_Model {
 		'gender',
 		'address',
 		'dob',
-		null
+		null // image, no significance in data wrangling, thus set to null
 	);
 
 	 var $column_search = array('firstname','lastname','address'); // column search indexers
@@ -19,14 +26,24 @@ class Person_model extends CI_Model {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->database();
+
 	}
 
-	private function _get_datatables_query() {
+	/*
+	 * Private helper for populating datatable
+	 */
+	private function _get_datatables_query( $users_id = null ) {
 
-		$this->db->from( $this->table ); // load up
+		if ( !isset($users_id) ){
+			$this->db->from( $this->table );
+		}
+		else {
+			$this->db->select('*');
+			$this->db->from( $this->table );
+			$this->db->where( 'user_id', $users_id );
+		}
 
-		$i = 0;
+		$i = 0; // like every good counter, has to re/start somewhere
 
 		foreach ( $this->column_search as $item ) // loop through indexers
 		{
@@ -35,21 +52,22 @@ class Person_model extends CI_Model {
 
 				if ( $i === 0 ) // first loop
 				{
-					$this->db->group_start(); //
-					$this->db->like( $item, $_POST['search']['value'] );
+					$this->db->group_start(); // query builder start
+					$this->db->like( $item, $_POST['search']['value'] ); // first filter applied
 				} else {
-					$this->db->or_like( $item, $_POST['search']['value'] ); // concat the where filters
+					$this->db->or_like( $item, $_POST['search']['value'] ); // concat current with previous filter
+					// clause
 				}
 
-				if ( count( $this->column_search ) - 1 == $i ) //last loop
+				if ( count( $this->column_search ) - 1 == $i ) //last loop, bail out
 				{
 					$this->db->group_end(); // pack up filter clauses
-				} //close bracket
+				}
 			}
 			$i ++;
 		}
 
-		if ( isset( $_POST['order'] ) ) // here order processing
+		if ( isset( $_POST['order'] ) ) // order processing
 		{
 			$this->db->order_by( $this->column_order[ $_POST['order']['0']['column'] ], $_POST['order']['0']['dir'] );
 		} else if ( isset( $this->order ) ) {
@@ -58,8 +76,11 @@ class Person_model extends CI_Model {
 		}
 	}
 
-	function get_datatables() {
-		$this->_get_datatables_query();
+	/*
+	 * Retrieves the populated datatable
+	 */
+	function get_datatables_by_user_id( $users_id ) {
+		$this->_get_datatables_query( $users_id );
 		if ( $_POST['length'] != - 1 ) {
 			$this->db->limit( $_POST['length'], $_POST['start'] );
 		}
@@ -74,6 +95,10 @@ class Person_model extends CI_Model {
 
 		return $query->num_rows();
 	}
+
+	/*
+	 * C.R.U.D. helpers designed to be invoked from the Person controller
+	 */
 
 	public function count_all() {
 		$this->db->from( $this->table );
@@ -104,6 +129,15 @@ class Person_model extends CI_Model {
 	public function delete_by_id( $id ) {
 		$this->db->where( 'id', $id );
 		$this->db->delete( $this->table );
+	}
+
+	public function verify_relation( $id, $email ){
+		$this->db->select('users_id');
+		$this->db->from('users');
+		$this->db->where('email', $email);
+		$this->db->where('users_id', $id);
+		$this->db->limit(1);
+		return $this->db->get();
 	}
 
 
