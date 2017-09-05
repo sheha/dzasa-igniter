@@ -22,7 +22,7 @@ class Person_model extends CI_Model {
 
 	 var $column_search = array('firstname','lastname','address'); // column search indexers
 
-	 var $order = array('id' => 'desc'); // default order
+	 var $order = array('user_id' => 'desc'); // default order
 
 	public function __construct() {
 		parent::__construct();
@@ -32,16 +32,13 @@ class Person_model extends CI_Model {
 	/*
 	 * Private helper for populating datatable
 	 */
-	private function _get_datatables_query( $users_id = null ) {
+	private function _get_datatables_query( $users_id  ) {
 
-		if ( !isset($users_id) ){
-			$this->db->from( $this->table );
-		}
-		else {
-			$this->db->select('*');
-			$this->db->from( $this->table );
-			$this->db->where( 'user_id', $users_id );
-		}
+
+		$this->db->select('*');
+		$this->db->from( $this->table );
+		$this->db->where( 'user_id', $users_id );
+
 
 		$i = 0; // like every good counter, has to re/start somewhere
 
@@ -79,7 +76,7 @@ class Person_model extends CI_Model {
 	/*
 	 * Retrieves the populated datatable
 	 */
-	function get_datatables_by_user_id( $users_id ) {
+	function get_datatables( $users_id ) {
 		$this->_get_datatables_query( $users_id );
 		if ( $_POST['length'] != - 1 ) {
 			$this->db->limit( $_POST['length'], $_POST['start'] );
@@ -137,7 +134,8 @@ class Person_model extends CI_Model {
 		$this->db->where('email', $email);
 		$this->db->where('users_id', $id);
 		$this->db->limit(1);
-		return $this->db->get();
+		$query = $this->db->get();
+		return $query->row();
 	}
 
 

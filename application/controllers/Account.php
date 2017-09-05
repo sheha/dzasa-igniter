@@ -32,13 +32,11 @@ class Account extends CI_Controller {
         $data['title'] = 'Change password';
 
         $data['session_user'] = $this->session_user;
-        /*
-         * Load view
-         */
-        $this->load->view('includes/header', $data);
-        $this->load->view('includes/navbar');
-        $this->load->view('profile/change_password');
-        $this->load->view('includes/footer');
+
+	    $data['main_content'] = 'profile/change_password';
+	    $this->load->view('includes/template', $data);
+
+
     }
 
     /*

@@ -12,5 +12,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jqc-1.12.4/dt-1.10.15/datatables.min.css"/>
     <!-- local -->
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/local-assets/css/style.css');?>">
+    <link href="--><?php echo site_url( 'assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.css' );?>">
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
 </head>
 <body>

@@ -3,6 +3,7 @@
 class Person extends CI_Controller {
 
 	var $session_user;
+	var $relationship;
 	public function __construct() {
 		parent::__construct();
 
@@ -14,27 +15,28 @@ class Person extends CI_Controller {
 		}
 		$this->session_user = $this->session->userdata('logged_in');
 
-		$user_id = $this->session->userdata('users_id') ?? null;
-
-		if ( ! isset( $user_id  )) {
-
-			show_error('No user id in session. Aborting!');
-			exit;
-		}
+		$user_id = $this->session_user['users_id'];
+		$email = $this->session_user['email'];
 
 		$this->load->model( 'person_model', 'person' );
+
+		$this->relationship = $this->person->verify_relation($user_id, $email);
 
 
 	}
 
 	public function index() {
-		$this->load->view( 'person_view' );
+		$data['title'] = 'Dashboard.Manage your contacts.';
+		$data['session_user'] = $this->session_user;
+
+		$data['main_content'] = 'persons/person';
+		$this->load->view('includes/template', $data);
 	}
 
 	public function ajax_list() {
 		$this->load->helper( 'url' );
 
-		$list = $this->person->get_datatables( $this->current_users_id );
+		$list = $this->person->get_datatables( $this->relationship->users_id );
 		$data = array();
 		$no   = $_POST['start'];
 		foreach ( $list as $person ) {
@@ -70,7 +72,7 @@ class Person extends CI_Controller {
 
 	public function ajax_edit( $id ) {
 		$data      = $this->person->get_by_id( $id );
-		$data->dob = ( $data->dob == '0000-00-00' ) ? '' : $data->dob; // if 0000-00-00 set tu empty for datepicker compatibility
+		$data->dob = ( $data->dob == '0000-00-00' ) ? '' : $data->dob; // if 0000-00-00 set to empty for datepicker
 		echo json_encode( $data );
 	}
 

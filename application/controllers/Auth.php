@@ -9,7 +9,7 @@ class Auth extends CI_Controller {
 
         Utils::no_cache();
         if ($this->session->userdata('logged_in')) {
-            redirect(base_url('dashboard'));
+            redirect(base_url('person'));
             exit;
         }
     }
@@ -39,15 +39,13 @@ class Auth extends CI_Controller {
         }
 
         if ($this->session->userdata('logged_in')) {
-            redirect(base_url('dashboard'));
+            redirect(base_url('person'));
             exit;
         }
 
+		$data['main_content'] = 'auth/login';
+        $this->load->view('includes/template', $data);
 
-        $this->load->view('auth/includes/header', $data);
-        $this->load->view('auth/includes/navbar');
-        $this->load->view('auth/login');
-        $this->load->view('auth/includes/footer');
     }
 
 
@@ -75,15 +73,13 @@ class Auth extends CI_Controller {
         }
 
         if ($this->session->userdata('logged_in')) {
-            redirect(base_url('dashboard'));
+            redirect(base_url('person'));
             exit;
         }
 
 
-        $this->load->view('auth/includes/header', $data);
-        $this->load->view('auth/includes/navbar');
-        $this->load->view('auth/register');
-        $this->load->view('auth/includes/footer');
+	    $data['main_content'] = 'auth/register';
+	    $this->load->view('includes/template', $data);
     }
 
     /**
@@ -116,11 +112,9 @@ class Auth extends CI_Controller {
             }
         }
 
+	    $data['main_content'] = 'auth/forgot_password';
+	    $this->load->view('includes/template', $data);
 
-        $this->load->view('auth/includes/header', $data);
-        $this->load->view('auth/includes/navbar');
-        $this->load->view('auth/forgot_password');
-        $this->load->view('auth/includes/footer');
     }
 
 
