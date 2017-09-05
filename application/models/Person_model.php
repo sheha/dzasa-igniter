@@ -12,17 +12,17 @@ class Person_model extends CI_Model {
 	var $table = 'persons';
 
 	var $column_order = array( // column layout
-		'firstname',
-		'lastname',
+		'first_name',
+		'last_name',
 		'gender',
 		'address',
 		'dob',
 		null // image, no significance in data wrangling, thus set to null
 	);
 
-	 var $column_search = array('firstname','lastname','address'); // column search indexers
+	 var $column_search = array('first_name','last_name','address'); // column search indexers
 
-	 var $order = array('user_id' => 'desc'); // default order
+	 var $order = array('id' => 'desc'); // default order
 
 	public function __construct() {
 		parent::__construct();
@@ -32,12 +32,12 @@ class Person_model extends CI_Model {
 	/*
 	 * Private helper for populating datatable
 	 */
-	private function _get_datatables_query( $users_id  ) {
+	private function _get_datatables_query( $user_id  ) {
 
 
 		$this->db->select('*');
 		$this->db->from( $this->table );
-		$this->db->where( 'user_id', $users_id );
+		$this->db->where( 'user_id', $user_id );
 
 
 		$i = 0; // like every good counter, has to re/start somewhere
@@ -50,9 +50,9 @@ class Person_model extends CI_Model {
 				if ( $i === 0 ) // first loop
 				{
 					$this->db->group_start(); // query builder start
-					$this->db->like( $item, $_POST['search']['value'] ); // first filter applied
+					$this->db->like( $item, $this->input->post['search']['value'] ); // first filter applied
 				} else {
-					$this->db->or_like( $item, $_POST['search']['value'] ); // concat current with previous filter
+					$this->db->or_like( $item, $this->input->post['search']['value'] ); // concat current with previous filter
 					// clause
 				}
 
@@ -64,10 +64,13 @@ class Person_model extends CI_Model {
 			$i ++;
 		}
 
-		if ( isset( $_POST['order'] ) ) // order processing
+		if ( isset( $this->input->post['order'] ) ) // order processing
 		{
-			$this->db->order_by( $this->column_order[ $_POST['order']['0']['column'] ], $_POST['order']['0']['dir'] );
+
+			$this->db->order_by( $this->column_order[ $this->input->post['order']['0']['column'] ], $this->input->post['order']['0']['dir'] );
+
 		} else if ( isset( $this->order ) ) {
+
 			$order = $this->order;
 			$this->db->order_by( key( $order ), $order[ key( $order ) ] );
 		}
@@ -76,10 +79,10 @@ class Person_model extends CI_Model {
 	/*
 	 * Retrieves the populated datatable
 	 */
-	function get_datatables( $users_id ) {
-		$this->_get_datatables_query( $users_id );
-		if ( $_POST['length'] != - 1 ) {
-			$this->db->limit( $_POST['length'], $_POST['start'] );
+	function get_datatables( $user_id ) {
+		$this->_get_datatables_query( $user_id );
+		if ( $this->input->post['length'] != - 1 ) {
+			$this->db->limit( $this->input->post['length'], $this->input->post['start'] );
 		}
 		$query = $this->db->get();
 
@@ -129,14 +132,13 @@ class Person_model extends CI_Model {
 	}
 
 	public function verify_relation( $id, $email ){
-		$this->db->select('users_id');
+		$this->db->select('id');
 		$this->db->from('users');
 		$this->db->where('email', $email);
-		$this->db->where('users_id', $id);
+		$this->db->where('id', $id);
 		$this->db->limit(1);
 		$query = $this->db->get();
 		return $query->row();
 	}
-
 
 }

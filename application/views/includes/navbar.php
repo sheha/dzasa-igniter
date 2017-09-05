@@ -6,14 +6,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> 
             </button>
-            <a href="<?php echo site_url('person');?>" class="navbar-brand">Phone Book,
+            <a href="<?php echo site_url('person');?>" class="navbar-brand">Welcome,
 		            <?php echo $session_user['first_name'].' '.$session_user['last_name']; ?>
                 </a>
         </div>
         
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="">Dashboard</a></li>
+                <li><a href="">Phone-bOoOoOoOk</a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

@@ -1350,3 +1350,408 @@ ERROR - 2017-09-05 12:44:42 --> Severity: Notice --> Undefined variable: id /usr
 ERROR - 2017-09-05 12:44:42 --> Query error: Unknown column 'id' in 'where clause' - Invalid query: SELECT *
 FROM `persons`
 WHERE `id` IS NULL
+ERROR - 2017-09-05 13:18:46 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:18:46 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:18:46 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 13:18:46 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:18:46 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:18:46 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 57
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 58
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 57
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 58
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 57
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 58
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 57
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 58
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 57
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined property: stdClass::$id /usr/share/nginx/html/phonebook/application/controllers/Person.php 58
+ERROR - 2017-09-05 13:19:02 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 13:19:02 --> Severity: Notice --> Undefined variable: users_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 13:19:09 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:19:09 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:19:09 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 13:19:09 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:19:09 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:19:09 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 13:19:11 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:19:11 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:19:11 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 13:19:11 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:19:11 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:19:11 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 13:20:14 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:20:14 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:20:14 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 13:20:14 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:20:14 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:20:14 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 13:20:21 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:20:21 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 13:20:21 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 13:20:21 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:20:21 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 13:20:21 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 13:21:59 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 13:21:59 --> Severity: Notice --> Undefined variable: users_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 13:23:02 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 13:23:02 --> Severity: Notice --> Undefined variable: users_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 13:27:41 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 13:27:41 --> Severity: Notice --> Undefined variable: users_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 14:44:30 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:44:30 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:44:30 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 14:44:30 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:44:30 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:44:30 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 14:44:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:44:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:44:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 14:44:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:44:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:44:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 14:44:41 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:44:41 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:44:41 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 14:44:41 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:44:41 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:44:41 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 14:45:16 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:45:16 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:45:16 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 14:45:16 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:45:16 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:45:16 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 14:45:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:45:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:45:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 14:45:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:45:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:45:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 14:49:35 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:49:35 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 14:49:35 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 14:49:35 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:49:35 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 14:49:35 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:39:40 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:39:40 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:39:40 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:39:40 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:39:40 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:39:40 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:40:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:40:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:40:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:40:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:40:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:40:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:41:29 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:41:29 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:41:29 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:41:29 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:41:29 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:41:29 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:41:34 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:41:34 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:41:34 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:41:34 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:41:34 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:41:34 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:46:31 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:46:31 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:46:31 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:46:31 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:46:31 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:46:31 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:46:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:46:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:46:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:46:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:46:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:46:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:48:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:48:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:48:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:48:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:48:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:48:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:48:39 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:48:39 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:48:39 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:48:39 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:48:39 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:48:39 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:48:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:48:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:48:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:48:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:48:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:48:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:49:17 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:49:17 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:49:17 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:49:17 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:49:17 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:49:17 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:49:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:49:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:49:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:49:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:49:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:49:37 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:49:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:49:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:49:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:49:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:49:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:49:49 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:56:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:56:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 16:56:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 16:56:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:56:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 16:56:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 16:56:54 --> Severity: Notice --> Undefined index: users_id /usr/share/nginx/html/phonebook/application/controllers/Person.php 18
+ERROR - 2017-09-05 16:56:56 --> Query error: Unknown column 'users_id' in 'field list' - Invalid query: SELECT `users_id`
+FROM `users`
+WHERE `email` = 'ismar@mail.com'
+AND `users_id` IS NULL
+ LIMIT 1
+ERROR - 2017-09-05 16:57:31 --> Severity: Notice --> Undefined index: users_id /usr/share/nginx/html/phonebook/application/controllers/Person.php 18
+ERROR - 2017-09-05 16:57:33 --> Query error: Unknown column 'users_id' in 'field list' - Invalid query: SELECT `users_id`
+FROM `users`
+WHERE `email` = 'ismar@mail.com'
+AND `id` IS NULL
+ LIMIT 1
+ERROR - 2017-09-05 16:57:44 --> Severity: Notice --> Undefined index: users_id /usr/share/nginx/html/phonebook/application/controllers/Person.php 18
+ERROR - 2017-09-05 16:58:16 --> Query error: Unknown column 'users_id' in 'field list' - Invalid query: SELECT `users_id`
+FROM `users`
+WHERE `email` = 'ismar@mail.com'
+AND `id` IS NULL
+ LIMIT 1
+ERROR - 2017-09-05 16:59:30 --> Severity: Notice --> Undefined index: users_id /usr/share/nginx/html/phonebook/application/controllers/Person.php 18
+ERROR - 2017-09-05 17:00:21 --> Query error: Unknown column 'users_id' in 'field list' - Invalid query: SELECT `users_id`
+FROM `users`
+WHERE `email` = 'ismar@mail.com'
+AND `id` IS NULL
+ LIMIT 1
+ERROR - 2017-09-05 17:01:38 --> Query error: Unknown column 'users_id' in 'field list' - Invalid query: SELECT `users_id`
+FROM `users`
+WHERE `email` = 'ismar@mail.com'
+AND `id` = '1'
+ LIMIT 1
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:03:34 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:03:34 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 17:03:35 --> Severity: Notice --> Undefined variable: users_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:10:21 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:10:21 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 17:10:22 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:13:18 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 17:13:18 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 17:15:40 --> Severity: Notice --> Trying to get property of non-object /usr/share/nginx/html/phonebook/application/controllers/Person.php 39
+ERROR - 2017-09-05 17:15:40 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 17:15:40 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 17:15:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 17:15:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 17:15:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 17:15:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 17:15:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 17:15:43 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 17:16:18 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 17:16:18 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 17:16:18 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 17:16:18 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 17:16:18 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 17:16:18 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 17:16:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 17:16:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 17:16:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 22
+ERROR - 2017-09-05 17:16:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 17:16:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 35
+ERROR - 2017-09-05 17:16:36 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$firstName /usr/share/nginx/html/phonebook/application/controllers/Person.php 45
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined property: stdClass::$lastName /usr/share/nginx/html/phonebook/application/controllers/Person.php 46
+ERROR - 2017-09-05 17:16:42 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 90 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 17:16:42 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:18:17 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 18:20:04 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 18:20:35 --> Severity: Notice --> Trying to get property of non-object /usr/share/nginx/html/phonebook/application/controllers/Person.php 39
+ERROR - 2017-09-05 18:20:44 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:20:44 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:21:19 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 18:21:21 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 18:22:02 --> Severity: Notice --> Trying to get property of non-object /usr/share/nginx/html/phonebook/application/controllers/Person.php 39
+ERROR - 2017-09-05 18:22:08 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:22:09 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:29:41 --> Severity: Notice --> Trying to get property of non-object /usr/share/nginx/html/phonebook/application/controllers/Person.php 39
+ERROR - 2017-09-05 18:29:43 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:29:44 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:29:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:29:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:29:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 18:29:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:29:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:29:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 18:30:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:30:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:30:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 18:30:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:30:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:30:05 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 18:30:20 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:30:20 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:30:20 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 18:30:20 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:30:20 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:30:20 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 18:30:33 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:30:33 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:30:33 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 18:30:33 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:30:33 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:30:33 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 18:31:38 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:31:38 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 18:31:38 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 18:31:38 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:31:38 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 18:31:38 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 18:32:23 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:32:24 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:35:05 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:35:07 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:39:12 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:39:13 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 18:39:43 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 18:39:43 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 19:02:40 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 19:02:40 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 19:06:54 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 19:06:54 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 19:08:18 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 19:08:19 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 19:46:16 --> 404 Page Not Found: %3C/index
+ERROR - 2017-09-05 19:46:48 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 19:46:48 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 19:46:48 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 19:46:48 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 19:46:48 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 19:46:48 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 19:47:20 --> 404 Page Not Found: %3C/index
+ERROR - 2017-09-05 20:01:58 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 20:01:58 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 20:01:58 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 20:01:58 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 20:01:58 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 20:01:58 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 20:23:59 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 20:23:59 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 20:38:14 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 20:38:14 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 20:38:26 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 20:38:26 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 20:40:04 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 20:40:05 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 20:40:12 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 20:40:13 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 20:40:52 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 20:40:52 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 20:41:42 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 20:41:42 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 20:57:07 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 20:57:07 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 20:58:32 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 20:58:33 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 20:59:08 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 20:59:08 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 21:01:24 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 21:01:25 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 21:01:39 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 21:01:40 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 21:11:16 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 21:11:17 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 21:11:24 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 21:11:25 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 10
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 23
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 36
+ERROR - 2017-09-05 22:23:57 --> Severity: Notice --> Undefined variable: session_user /usr/share/nginx/html/phonebook/application/views/includes/navbar.php 37
+ERROR - 2017-09-05 22:45:52 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 22:45:52 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 22:45:53 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 22:45:53 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 22:52:45 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 22:52:45 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 22:52:52 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 22:52:52 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 22:52:53 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 22:52:53 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 22:52:54 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 22:52:54 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 22:52:55 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 22:52:55 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 23:01:27 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 23:01:27 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 23:01:28 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 23:01:28 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 23:01:35 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 23:01:35 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 23:01:36 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 23:01:36 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 23:01:37 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 23:01:37 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 23:01:37 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 23:01:37 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 23:01:38 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 23:01:38 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 23:01:38 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 23:01:38 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 23:01:39 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 23:01:39 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 23:01:39 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 23:01:39 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40
+ERROR - 2017-09-05 23:02:48 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 2
+ERROR - 2017-09-05 23:03:01 --> Severity: Notice --> Undefined variable: data /usr/share/nginx/html/phonebook/application/views/includes/template.php 3
+ERROR - 2017-09-05 23:03:55 --> Severity: Warning --> Missing argument 1 for Person_model::_get_datatables_query(), called in /usr/share/nginx/html/phonebook/application/models/Person_model.php on line 93 and defined /usr/share/nginx/html/phonebook/application/models/Person_model.php 35
+ERROR - 2017-09-05 23:03:56 --> Severity: Notice --> Undefined variable: user_id /usr/share/nginx/html/phonebook/application/models/Person_model.php 40

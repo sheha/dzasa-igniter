@@ -15,7 +15,7 @@ class Person extends CI_Controller {
 		}
 		$this->session_user = $this->session->userdata('logged_in');
 
-		$user_id = $this->session_user['users_id'];
+		$user_id = $this->session_user['id'];
 		$email = $this->session_user['email'];
 
 		$this->load->model( 'person_model', 'person' );
@@ -26,7 +26,7 @@ class Person extends CI_Controller {
 	}
 
 	public function index() {
-		$data['title'] = 'Dashboard.Manage your contacts.';
+		$data['title'] = 'Welcome to Phonebook';
 		$data['session_user'] = $this->session_user;
 
 		$data['main_content'] = 'persons/person';
@@ -36,14 +36,14 @@ class Person extends CI_Controller {
 	public function ajax_list() {
 		$this->load->helper( 'url' );
 
-		$list = $this->person->get_datatables( $this->relationship->users_id );
+		$list = $this->person->get_datatables( $this->relationship->id );
 		$data = array();
-		$no   = $_POST['start'];
+		$no   = $this->input->post['start'];
 		foreach ( $list as $person ) {
 			$no ++;
 			$row   = array();
-			$row[] = $person->firstName;
-			$row[] = $person->lastName;
+			$row[] = $person->first_name;
+			$row[] = $person->last_name;
 			$row[] = $person->gender;
 			$row[] = $person->address;
 			$row[] = $person->dob;
@@ -61,7 +61,7 @@ class Person extends CI_Controller {
 		}
 
 		$output = array(
-			"draw"            => $_POST['draw'],
+			"draw"            => $this->input->post['draw'],
 			"recordsTotal"    => $this->person->count_all(),
 			"recordsFiltered" => $this->person->count_filtered(),
 			"data"            => $data,
@@ -72,7 +72,7 @@ class Person extends CI_Controller {
 
 	public function ajax_edit( $id ) {
 		$data      = $this->person->get_by_id( $id );
-		$data->dob = ( $data->dob == '0000-00-00' ) ? '' : $data->dob; // if 0000-00-00 set to empty for datepicker
+		$data->dob = ( $data->dob == '0000-00-00' ) ? '' : $data->dob; // datepicker fix
 		echo json_encode( $data );
 	}
 
@@ -80,11 +80,13 @@ class Person extends CI_Controller {
 		$this->_validate();
 
 		$data = array(
-			'firstName' => $this->input->post( 'firstName' ),
-			'lastName'  => $this->input->post( 'lastName' ),
+			'first_name' => $this->input->post( 'first_name' ),
+			'last_name'  => $this->input->post( 'last_name' ),
 			'gender'    => $this->input->post( 'gender' ),
 			'address'   => $this->input->post( 'address' ),
 			'dob'       => $this->input->post( 'dob' ),
+			//piggyback the owner user_id from the server session
+			'user_id'   => $this->session_user['id'],
 		);
 
 		if ( ! empty( $_FILES['photo']['name'] ) ) {
@@ -100,14 +102,16 @@ class Person extends CI_Controller {
 	public function ajax_update() {
 		$this->_validate();
 		$data = array(
-			'firstName' => $this->input->post( 'firstName' ),
-			'lastName'  => $this->input->post( 'lastName' ),
+			'first_name' => $this->input->post( 'first_name' ),
+			'last_name'  => $this->input->post( 'last_name' ),
 			'gender'    => $this->input->post( 'gender' ),
 			'address'   => $this->input->post( 'address' ),
 			'dob'       => $this->input->post( 'dob' ),
+			//
+			'user_id'   => $this->session_user['id'],
 		);
 
-		if ( $this->input->post( 'remove_photo' ) ) // if remove photo checked
+		if ( $this->input->post( 'remove_photo' ) ) // on remove image checked
 		{
 			if ( file_exists( 'upload/' . $this->input->post( 'remove_photo' ) ) && $this->input->post( 'remove_photo' ) ) {
 				unlink( 'upload/' . $this->input->post( 'remove_photo' ) );
@@ -115,7 +119,7 @@ class Person extends CI_Controller {
 			$data['photo'] = '';
 		}
 
-		if ( ! empty( $_FILES['photo']['name'] ) ) {
+		if ( ! empty( $_FILES['photo']['name'] ) ) { // point of upload
 			$upload = $this->_do_upload();
 
 			//delete file
@@ -145,10 +149,11 @@ class Person extends CI_Controller {
 	private function _do_upload() {
 		$config['upload_path']   = 'upload/';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']      = 100; //set max size allowed in Kilobyte
-		$config['max_width']     = 1000; // set max width image allowed
-		$config['max_height']    = 1000; // set max height allowed
-		$config['file_name']     = round( microtime( true ) * 1000 ); //just milisecond timestamp fot unique name
+		$config['max_size']      = 100; //max size allowed in kb
+		$config['max_width']     = 1000; // max width  allowed
+		$config['max_height']    = 1000; // max height allowed
+		$config['file_name']     = round( microtime( true ) * 1000 ); // can't beat micro-second  time-stamps for
+		// uniqueness
 
 		$this->load->library( 'upload', $config );
 
@@ -170,14 +175,14 @@ class Person extends CI_Controller {
 		$data['inputerror']   = array();
 		$data['status']       = true;
 
-		if ( $this->input->post( 'firstName' ) == '' ) {
-			$data['inputerror'][]   = 'firstName';
+		if ( $this->input->post( 'first_name' ) == '' ) {
+			$data['inputerror'][]   = 'first_name';
 			$data['error_string'][] = 'First name is required';
 			$data['status']         = false;
 		}
 
-		if ( $this->input->post( 'lastName' ) == '' ) {
-			$data['inputerror'][]   = 'lastName';
+		if ( $this->input->post( 'last_name' ) == '' ) {
+			$data['inputerror'][]   = 'last_name';
 			$data['error_string'][] = 'Last name is required';
 			$data['status']         = false;
 		}

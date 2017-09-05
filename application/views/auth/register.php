@@ -17,13 +17,13 @@
                     <?php } ?>
  
                     <div class="form-group">
-                        <label for="firstname" class="col-md-3 control-label">First Name</label>
+                        <label for="first_name" class="col-md-3 control-label">First Name</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="first_name" placeholder="First Name" value="<?php echo $this->input->post('first_name');?>">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                        <label for="last_name" class="col-md-3 control-label">Last Name</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="last_name" placeholder="Last Name" value="<?php echo $this->input->post('last_name');?>">
                         </div>
@@ -55,8 +55,8 @@
                         <div class="col-md-9 icheck pl40">
                             <?php  
                                $checked ='';
-                               if(count($_POST)){
-                                   if($this->input->post('is_active'))  $checked ='checked';
+                               if(count($this->input->post())){
+                                   if($this->input->post('is_active')) {$checked ='checked';}
                                }
                                else $checked ='checked';
                             ?>

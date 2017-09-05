@@ -1,5 +1,9 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed.');
 
+/*
+ * SETUP FOR PHPMailer, using a regular email account as a primitive mail server
+ */
+
 $config['useragent']        = 'PHPMailer';              // Mail engine switcher: 'CodeIgniter' or 'PHPMailer'
 $config['protocol']         = 'smtp';                   // 'mail', 'sendmail', or 'smtp'
 $config['mailpath']         = '/usr/sbin/sendmail';
