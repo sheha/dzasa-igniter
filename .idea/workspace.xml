@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6cfe512-b175-460a-a2a9-f5c62d9063d5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d6f324b7650f346a04bea5516d0a6a5158727da87d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/1504730661470.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/1504732442594.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/local-assets/js/phonebook.module.js" afterPath="$PROJECT_DIR$/assets/local-assets/js/phonebook.module.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d62d7a8218bda919adf09842c830da32d2b55620a3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d63186e44ebfc719dee94de97c79249817bd3b156b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d66a97567b9acb0203a3659df2bff0bf488f55b499" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d6712450c7b656e3c673bcc03123b64dc65c6114b0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d6763dc1161c018dad6c43072b9d9849167296f2ec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d67a56de219c73d5fd5072e9921a5a41d42e20fc29" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d68b2e98ea79f42063d93fb8184b1ee18a90854d7c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d691545b27fab0852f60b86cd87952cad3847c95ec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d6e24ec8a90710cd22a92866b3dd015c63cc986581" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionf528764d624db129b32c21fbca0cb8d6f8d1b2f33dea0029094425708ab2867c217d0162" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -398,46 +403,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phonebook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phonebook" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phonebook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phonebook" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -609,12 +574,12 @@
       <workItem from="1504561422827" duration="38971000" />
       <workItem from="1504610308815" duration="42101000" />
       <workItem from="1504692643368" duration="28941000" />
-      <workItem from="1504741207766" duration="230000" />
+      <workItem from="1504741207766" duration="265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152619000" />
+    <option name="totallyTimeSpent" value="152654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,9 +592,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-4" width="1628" height="1011" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15482233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15482233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.069767445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
