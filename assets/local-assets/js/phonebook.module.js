@@ -3,15 +3,12 @@
  * defines datatable, and keeps the DOM alive.
  * author: @sheha
  */
-var reloadTable;
 $(document).ready(function() {
 
   // declare vars at the top, ECMA rules
-  var crudMethod, table,
+  var crudMethod, table;
 
-      reloadTable = function() {
-        table.ajax.reload();
-      };
+
 
   $(".dropdown-toggle").dropdown();
 
@@ -148,7 +145,7 @@ $(document).ready(function() {
         dataType: 'JSON',
         success: function(data) {
           $('#modal_form').modal('hide');
-          this.reloadTable();
+          table.ajax.reload();
         },
         error: function() {
           debugger;
@@ -204,6 +201,10 @@ $(document).ready(function() {
     $(this).parent().parent().removeClass('has-error');
     $(this).next().empty();
   });
+
+  this.reloadTable = function() {
+    return table.ajax.reload();
+  };
 
 });
 
