@@ -1,43 +1,54 @@
-lista uradjenog
-CONFIG:
-    base_url
-    logging_threshold
-    encryption_key postavljen (generisan manuelno)
-    session moved to APPPATH . 'sessions', away from index in root
-    objekat sesije se snima u folder koji je ispod roota, onemogucen access - kofol security
-    cookie domain - jok
-    CSRF Prot - jok
-    database config - ok
-    strict mode on
-    MOD REWRITE - enabled, index.php disposed of(fuuuj - al ovo napati)
-    user management working
+**PHONEBOOK app.**
 
+PHP, CodeIgniter3, Bootstrap3, MySql, jQuery(2.2.4), ajax 
 
-EVO MOJ virtualhost za apache2
+Packages: loaded from CDN servers
 
-    <VirtualHost *:80>
-        ServerAdmin webmaster@localhost
-        DocumentRoot /vagrant/src
-        LogLevel debug
+Environment: PHP7-FPM, NGINX. 
 
-        ErrorLog /var/log/apache2/error.log
-        CustomLog /var/log/apache2/access.log combined
+Nginx vhost setup:
+````
+server {
+    listen 80;
+    server_name phonebook.dev www.phonebook.dev;
 
-        <Directory /vagrant/src>
-            AllowOverride All
-            Require all granted
-        </Directory>
-    </VirtualHost>
-    
+    root /usr/share/nginx/html/phonebook;
 
-- Ja sam na vagrantu pa ti stavi svoj doc root /var/www/phonebook, ako bude kakvih problema.
-Vjerovatno ti je AllowOverride u apache2.confu za /var/www/, to je obavezno za rewrite rules  
-Login imam, radim na prikazu imenika, bice datatable kontrola tu (https://datatables.net/download/ - pogledaj, bas je
- lijepa ima modale za edit polja i sl).Bice pravo reprezentativno
- Nije obicni login nego, imas forgot pass, registraciju, aktivaciju/deaktivaciju korisnika
- Eto pogledaj ako ti valja smjer u kojem ide, ako ne valja reci gdje ne valja
+    index index.php index.html;
 
- OVO STO SAD COMMITAM JE NEFUNKCIONALNO, AKO HOCES DA VIDIS KAKO FERCERA login, POVUCI PRETHODNU VERZIJU, PRVI COMMIT
-VECINA LIBRARIJA SE UCITAVAJU SA CDN-A, SAMO ONE KOJE NISU HOSTANE SU LOKALNO U ASSETSIMA
+    # set expiration of assets to MAX for caching
+    location ~* \.(ico|css|js|gif|jpe?g|png)(\?[0-9]+)?$ {
+             expires 1d;
+             log_not_found on;
+    }
 
-Eh Eto, Ismar
+   location / {
+                # Check if a file or directory index file exists, else route it to index.php.
+                try_files $uri $uri/ /index.php;
+   }
+
+   location ~* \.php {
+
+        include fastcgi.conf;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_cache off;
+        fastcgi_index index.php;
+    }
+
+   location ~ /\.ht {
+        deny all;
+    }
+}
+
+ ````
+ 
+ Database dump provided in _init, together with the initial create script
+ Test user: ismar@mail.com;Password1
+ 
+ The app features:
+ User management (Register, Login, Forgot pasword mailer, Change password, Logout) 
+ Dashboard Screen ( Datagrid populated with Ajax Api calls,No caching) 
+ 
+ 
+Ismar Sehic, i.sheeha@gmail.com

@@ -7,8 +7,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="<?php echo site_url( 'person' ); ?>" class="navbar-brand">Welcome,
-				<?php echo $session_user['first_name'] . ' ' . $session_user['last_name']; ?>
+            <a href="<?php  echo site_url( 'person' ); ?>" class="navbar-brand">Welcome,
+				<?php echo  ($session_user['first_name'] ?? '') . ' ' . ($session_user['last_name'] ?? ''); ?>
             </a>
         </div>
 
@@ -21,7 +21,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon glyphicon-user"></span>
-                        <strong><?php echo $session_user['first_name']; ?></strong>
+                        <strong><?php echo ( $session_user['first_name'] ?? '' ); ?></strong>
                         <span class="glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -35,9 +35,10 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <p class="text-left">
-                                            <strong><?php echo $session_user['first_name'] . ' ' . $session_user['last_name']; ?></strong>
+                                            <strong><?php echo ($session_user['first_name'] ?? '') . ' ' .
+                                                               ($session_user['last_name'] ?? ''); ?></strong>
                                         </p>
-                                        <p class="text-left small"><?php echo $session_user['email']; ?></p>
+                                        <p class="text-left small"><?php echo ($session_user['email'] ?? ''); ?></p>
                                         <p class="text-left">
                                             <a href="<?php echo site_url( 'account/change_password' ); ?>"
                                                class="btn btn-primary btn-block btn-sm">Change password</a>
