@@ -2,10 +2,7 @@
 <!-- CDN -->
 <!--<script-->
 
-<script>
-        var baseUrl = '<?php echo base_url(); ?>';
-        var siteUrl = '<?php echo site_url(); ?>'
-                                                  </script>
+
 
 <!--  jQuery is high dependency package, needs to be loaded first -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -20,6 +17,7 @@
 <script type="text/javascript"
         src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
 <!--  And a custom bootstrap datetimepicker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/eonasdan-bootstrap-datetimepicker@4.17.47/src/js/bootstrap-datetimepicker.min.js">
 </script>

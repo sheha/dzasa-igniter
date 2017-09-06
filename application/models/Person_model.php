@@ -30,15 +30,13 @@ class Person_model extends CI_Model {
 	}
 
 	/*
-	 * Private helper for populating datatable
+	 * helper for populating datatable
 	 */
 	private function _get_datatables_query( $user_id  ) {
-
 
 		$this->db->select('*');
 		$this->db->from( $this->table );
 		$this->db->where( 'user_id', $user_id );
-
 
 		$i = 0; // like every good counter, has to re/start somewhere
 
@@ -100,9 +98,9 @@ class Person_model extends CI_Model {
 	 * C.R.U.D. helpers designed to be invoked from the Person controller
 	 */
 
-	public function count_all() {
+	public function count_all( $id ) {
 		$this->db->from( $this->table );
-
+		$this->db->where( 'id', $id );
 		return $this->db->count_all_results();
 	}
 

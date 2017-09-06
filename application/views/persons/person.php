@@ -6,8 +6,8 @@
 
     <h3>Person Info</h3>
     <br/>
-    <button class="btn btn-success" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
-    <button class="btn btn-default" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
+    <button class="btn btn-success" onclick="addPerson()"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
+    <button class="btn btn-default" onclick="reloadTable()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
     <br/>
     <br/>
     <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -39,7 +39,7 @@
     </table>
 
     <footer>
-        <p>&copy; <?php echo date('Y'); ?></p>
+        <p>&copy; No Copyright. Freeworld citizen Ismar Sehic <?php echo date('Y'); ?></p>
     </footer>
 
 </div>
@@ -93,7 +93,8 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Date of Birth</label>
                             <div class="col-md-9">
-                                <input name="dob" placeholder="yyyy-mm-dd" class="form-control datepicker" type="text">
+                                <input name="dob" placeholder="yyyy-mm-dd" class="form-control datetimepicker"
+                                       type="text">
                                 <span class="help-block"></span>
                             </div>
                         </div>

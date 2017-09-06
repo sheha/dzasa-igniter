@@ -2,92 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6cfe512-b175-460a-a2a9-f5c62d9063d5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.standalone.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.standalone.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.standalone.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.standalone.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker3.standalone.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.az.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.bg.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.bs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ca.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.cs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.cy.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.da.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.de.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.el.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.en-AU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.en-GB.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.eo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.es.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.et.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.eu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.fa.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.fi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.fo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.fr-CH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.fr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.he.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.hr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.hu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.hy.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.id.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.is.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.it-CH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.it.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ja.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ka.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.kh.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.kk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ko.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.kr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.lt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.lv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.me.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.mk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.mn.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ms.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.nb.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.nl-BE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.nl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.no.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.pl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.pt-BR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.pt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ro.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.rs-latin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.rs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ru.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sr-latin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.sw.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.th.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.tr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.uk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.vi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.zh-CN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.zh-TW.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/299afa1e-fcbd-44bb-b68a-1795704181f4.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Person.php" afterPath="$PROJECT_DIR$/application/controllers/Person.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Person_model.php" afterPath="$PROJECT_DIR$/application/models/Person_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/includes/footer.php" afterPath="$PROJECT_DIR$/application/views/includes/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/includes/header.php" afterPath="$PROJECT_DIR$/application/views/includes/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/persons/person.php" afterPath="$PROJECT_DIR$/application/views/persons/person.php" />
@@ -156,15 +75,35 @@
     </PATH>
   </component>
   <component name="DockManager">
-    <window id="2">
+    <window id="1">
       <content type="file-editors">
         <state>
           <leaf>
+            <file leaf-file-name="phonebook.module.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/assets/local-assets/js/phonebook.module.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="347">
+                    <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+                    <folding>
+                      <element signature="n#!!doc" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="log-2017-09-05.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/application/logs/log-2017-09-05.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="111">
-                    <caret line="1642" column="158" lean-forward="true" selection-start-line="1642" selection-start-column="158" selection-end-line="1642" selection-end-column="158" />
+                  <state relative-caret-position="-1219">
+                    <caret line="1642" column="158" lean-forward="false" selection-start-line="1642" selection-start-column="158" selection-end-line="1642" selection-end-column="158" />
                     <folding />
                   </state>
                 </provider>
@@ -178,14 +117,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="person.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="person.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/persons/person.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding>
-                <element signature="e#1133#1139#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="338">
+              <caret line="95" column="54" lean-forward="true" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2116">
+              <caret line="125" column="12" lean-forward="true" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,8 +140,8 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state relative-caret-position="323">
+              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -203,8 +150,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="382">
+              <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -213,8 +160,8 @@
       <file leaf-file-name="Person.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Person.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="-1768">
+              <caret line="67" column="82" lean-forward="false" selection-start-line="67" selection-start-column="82" selection-end-line="67" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -223,8 +170,8 @@
       <file leaf-file-name="Person_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Person_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -233,22 +180,9 @@
       <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="357">
+              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phonebook.module.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/local-assets/js/phonebook.module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-884">
-              <caret line="74" column="6" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#5535#6982#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -256,7 +190,7 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="3910">
               <caret line="230" column="20" lean-forward="false" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
               <folding />
             </state>
@@ -266,8 +200,8 @@
       <file leaf-file-name="constants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="87" column="2" lean-forward="true" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
+            <state relative-caret-position="1479">
+              <caret line="87" column="2" lean-forward="false" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -277,36 +211,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table-striped</find>
-      <find>las</find>
-      <find>last</find>
-      <find>lastN</find>
-      <find>lastName</find>
-      <find>a</find>
-      <find>aja</find>
-      <find>ajax</find>
-      <find>ajax_</find>
-      <find>ajax_l</find>
-      <find>ajax_lis</find>
-      <find>base_url</find>
-      <find>save_method</find>
-      <find>ajax_list</find>
-      <find>header</find>
-      <find>%3C/index</find>
-      <find>/index</find>
-      <find>load-&gt;view</find>
-      <find>j</find>
-      <find>jq</find>
-      <find>jque</find>
-      <find>jquery</find>
-      <find>jquery-</find>
-      <find>re</find>
-      <find>req</find>
       <find>requi</find>
       <find>requir</find>
       <find>require</find>
       <find>onclick</find>
+      <find>add_p</find>
+      <find>add_pers</find>
+      <find>addPerson</find>
+      <find>a</find>
+      <find>add</find>
+      <find>add_</find>
+      <find>add_per</find>
+      <find>add_perso</find>
+      <find>click</find>
       <find>add_person</find>
+      <find>_do_upload</find>
+      <find>modal_form</find>
+      <find>first_name</find>
+      <find>btnSave</find>
+      <find>siteUrl</find>
+      <find>datepicker</find>
+      <find>base_url</find>
+      <find>fo</find>
+      <find>fomr</find>
+      <find>fom</find>
+      <find>for</find>
+      <find>form-</find>
+      <find>form-c</find>
+      <find>form-co</find>
+      <find>form-con</find>
+      <find>form-control</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -347,15 +281,15 @@
         <option value="$PROJECT_DIR$/application/views/profile/change_password.php" />
         <option value="$PROJECT_DIR$/application/controllers/Auth.php" />
         <option value="$PROJECT_DIR$/application/views/auth/register.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Person.php" />
-        <option value="$PROJECT_DIR$/application/models/Person_model.php" />
         <option value="$PROJECT_DIR$/_init/database.sql" />
         <option value="$PROJECT_DIR$/assets/local-assets/js/module.phonebook.js" />
         <option value="$PROJECT_DIR$/application/views/includes/template.php" />
         <option value="$PROJECT_DIR$/application/views/includes/navbar.php" />
+        <option value="$PROJECT_DIR$/application/views/persons/person.php" />
+        <option value="$PROJECT_DIR$/application/models/Person_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Person.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/views/includes/header.php" />
-        <option value="$PROJECT_DIR$/application/views/persons/person.php" />
         <option value="$PROJECT_DIR$/application/views/includes/footer.php" />
         <option value="$PROJECT_DIR$/assets/local-assets/js/phonebook.module.js" />
       </list>
@@ -397,10 +331,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
+    <option name="x" value="1677" />
     <option name="y" value="-4" />
-    <option name="width" value="1628" />
-    <option name="height" value="1011" />
+    <option name="width" value="1686" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -592,6 +526,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonebook" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -660,12 +612,12 @@
     <property name="SearchEverywhereHistoryKey" value="clipboar&#9;ACTION&#9;ChangesView.ApplyPatchFromClipboard" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public_html" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/application/sessions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -797,27 +749,28 @@
       <workItem from="1504528636512" duration="2976000" />
       <workItem from="1504561422827" duration="38971000" />
       <workItem from="1504610308815" duration="42101000" />
+      <workItem from="1504692643368" duration="12597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123448000" />
+    <option name="totallyTimeSpent" value="136045000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-4" width="1628" height="1011" extended-state="6" />
+    <frame x="1677" y="-4" width="1686" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10786802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07233503" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.069767445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31298557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2900585" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2900585" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -828,6 +781,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -977,7 +940,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>88</line>
+          <line>86</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1027,17 +990,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>86</line>
+          <line>84</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>84</line>
+          <line>82</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>82</line>
+          <line>80</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1047,27 +1010,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>134</line>
+          <line>132</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>39</line>
+          <line>38</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>38</line>
+          <line>37</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>37</line>
+          <line>36</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>139</line>
+          <line>137</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1112,27 +1075,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>74</line>
+          <line>72</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>46</line>
+          <line>44</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>49</line>
+          <line>47</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>54</line>
+          <line>52</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>66</line>
+          <line>64</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1142,27 +1105,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>44</line>
+          <line>42</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>71</line>
+          <line>69</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>113</line>
+          <line>111</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>119</line>
+          <line>117</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>125</line>
+          <line>123</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1172,37 +1135,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>59</line>
+          <line>62</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>73</line>
+          <line>76</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>88</line>
+          <line>91</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>165</line>
+          <line>168</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>157</line>
+          <line>160</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>149</line>
+          <line>152</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>168</line>
+          <line>171</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1237,42 +1200,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>74</line>
+          <line>77</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>98</line>
+          <line>101</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>96</line>
+          <line>99</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>110</line>
+          <line>113</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>107</line>
+          <line>110</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>134</line>
+          <line>137</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>145</line>
+          <line>148</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>177</line>
+          <line>180</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1287,12 +1250,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>140</line>
+          <line>138</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Person.php</url>
-          <line>81</line>
+          <line>84</line>
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1302,7 +1265,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/Person_model.php</url>
-          <line>42</line>
+          <line>40</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
@@ -1337,24 +1300,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/3d9e8482/299afa1e-fcbd-44bb-b68a-1795704181f4/pbook.users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/3d9e8482/299afa1e-fcbd-44bb-b68a-1795704181f4/pbook.users" />
     <entry file="file://$PROJECT_DIR$/application/third_party/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,7 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,7 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1386,7 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1394,7 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,7 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,7 +1464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,30 +1475,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/local-assets/js/helpers.modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/local-assets/js/helpers.crud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/logs/log-2017-09-05.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="1642" column="158" lean-forward="true" selection-start-line="1642" selection-start-column="158" selection-end-line="1642" selection-end-column="158" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/local-assets/js/helpers.modals.js" />
+    <entry file="file://$PROJECT_DIR$/assets/local-assets/js/helpers.crud.js" />
     <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1563,14 +1485,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1938">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.js" />
     <entry file="file://$PROJECT_DIR$/application/views/auth/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1579,14 +1494,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/index.html" />
     <entry file="file://$PROJECT_DIR$/application/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1635,42 +1543,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Person_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/constants.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="87" column="2" lean-forward="true" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
+        <state relative-caret-position="1479">
+          <caret line="87" column="2" lean-forward="false" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Person.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/asset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/asset.php" />
     <entry file="file://$PROJECT_DIR$/application/controllers/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1691,55 +1576,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3910">
+          <caret line="230" column="20" lean-forward="false" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2017-09-05.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1219">
+          <caret line="1642" column="158" lean-forward="false" selection-start-line="1642" selection-start-column="158" selection-end-line="1642" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Person_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Person.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1768">
+          <caret line="67" column="82" lean-forward="false" selection-start-line="67" selection-start-column="82" selection-end-line="67" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="2116">
+          <caret line="125" column="12" lean-forward="true" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state relative-caret-position="382">
+          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        <state relative-caret-position="323">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/persons/person.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="e#1133#1139#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="230" column="20" lean-forward="false" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+        <state relative-caret-position="338">
+          <caret line="95" column="54" lean-forward="true" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/local-assets/js/phonebook.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-884">
-          <caret line="74" column="6" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="13" />
+        <state relative-caret-position="347">
+          <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#5535#6982#0" expanded="false" />
           </folding>
         </state>
       </provider>

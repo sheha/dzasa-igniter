@@ -54,15 +54,18 @@ class Person extends CI_Controller {
 			}
 
 			//add html for action
-			$row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_person(' . "'" . $person->id . "'" . ')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
-                  <a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_person(' . "'" . $person->id . "'" . ')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+			$row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="editPerson('
+					 . "'" . $person->id . "'" . ')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+
+                  		<a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="deletePerson('
+					 . "'" . $person->id . "'" . ')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
 
 			$data[] = $row;
 		}
 
 		$output = array(
 			"draw"            => $this->input->post['draw'],
-			"recordsTotal"    => $this->person->count_all(),
+			"recordsTotal"    => $this->person->count_all($this->relationship->id ),
 			"recordsFiltered" => $this->person->count_filtered(),
 			"data"            => $data,
 		);
@@ -85,7 +88,7 @@ class Person extends CI_Controller {
 			'gender'    => $this->input->post( 'gender' ),
 			'address'   => $this->input->post( 'address' ),
 			'dob'       => $this->input->post( 'dob' ),
-			//piggyback the owner user_id from the server session
+			//piggyback the owner user_id from the server session - relationship source of truth
 			'user_id'   => $this->session_user['id'],
 		);
 
@@ -107,7 +110,7 @@ class Person extends CI_Controller {
 			'gender'    => $this->input->post( 'gender' ),
 			'address'   => $this->input->post( 'address' ),
 			'dob'       => $this->input->post( 'dob' ),
-			//
+			// snatch the owner user id here, no point in bringing it out to client - relationship source of truth
 			'user_id'   => $this->session_user['id'],
 		);
 
