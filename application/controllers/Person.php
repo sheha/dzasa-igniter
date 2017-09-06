@@ -1,45 +1,54 @@
 <?php defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
 
+/*
+ * Server side persons controller, talking to the ajax handler on the 'dark' side.
+ * author: @sheha
+ */
 class Person extends CI_Controller {
 
 	var $session_user;
 	var $relationship;
+
 	public function __construct() {
 		parent::__construct();
 
 		Utils::no_cache();
 
-		if ( ! $this->session->userdata('logged_in') ) {
-			redirect(base_url('auth/login'));
+		if ( ! $this->session->userdata( 'logged_in' ) )
+		{
+			redirect( base_url( 'auth/login' ) );
 			exit;
 		}
-		$this->session_user = $this->session->userdata('logged_in');
+		$this->session_user = $this->session->userdata( 'logged_in' );
 
 		$user_id = $this->session_user['id'];
-		$email = $this->session_user['email'];
+		$email   = $this->session_user['email'];
 
 		$this->load->model( 'person_model', 'person' );
 
-		$this->relationship = $this->person->verify_relation($user_id, $email);
-
+		$this->relationship = $this->person->verify_relation( $user_id, $email );
 
 	}
 
 	public function index() {
-		$data['title'] = 'Welcome to Phonebook';
+		$data['title']        = 'Welcome to Phonebook';
 		$data['session_user'] = $this->session_user;
 
 		$data['main_content'] = 'persons/person';
-		$this->load->view('includes/template', $data);
+		$this->load->view( 'includes/template', $data );
 	}
-
+	/*
+	 * Main endpoint for the table, gets the persons list, builds the rows,
+	 * and outputs the payload in json.
+	 */
 	public function ajax_list() {
 		$this->load->helper( 'url' );
 
 		$list = $this->person->get_datatables( $this->relationship->id );
 		$data = array();
 		$no   = $this->input->post['start'];
-		foreach ( $list as $person ) {
+		foreach ( $list as $person )
+		{
 			$no ++;
 			$row   = array();
 			$row[] = $person->first_name;
@@ -47,10 +56,13 @@ class Person extends CI_Controller {
 			$row[] = $person->gender;
 			$row[] = $person->address;
 			$row[] = $person->dob;
-			if ( $person->photo ) {
-				$row[] = '<a href="' . base_url( 'upload/' . $person->photo ) . '" target="_blank"><img src="' . base_url( 'upload/' . $person->photo ) . '" class="img-responsive" /></a>';
-			} else {
-				$row[] = '(No photo)';
+			if ( $person->photo )
+			{
+				$row[] = '<a href="' . base_url( 'upload/' . $person->photo ) . '" target="_blank"><img src="' .
+						 base_url( 'upload/' . $person->photo ) . '" class="img-responsive" /></a>';
+			} else
+			{
+				$row[] = '(No photo) ';
 			}
 
 			//add html for action
@@ -65,98 +77,100 @@ class Person extends CI_Controller {
 
 		$output = array(
 			"draw"            => $this->input->post['draw'],
-			"recordsTotal"    => $this->person->count_all($this->relationship->id ),
+			"recordsTotal"    => $this->person->count_all( $this->relationship->id ),
 			"recordsFiltered" => $this->person->count_filtered(),
 			"data"            => $data,
 		);
 		//output to json format
 		echo json_encode( $output );
 	}
-
+	// edit row (person)
 	public function ajax_edit( $id ) {
 		$data      = $this->person->get_by_id( $id );
 		$data->dob = ( $data->dob == '0000-00-00' ) ? '' : $data->dob; // datepicker fix
 		echo json_encode( $data );
 	}
-
+	// adds the new person
 	public function ajax_add() {
 		$this->_validate();
 
 		$data = array(
 			'first_name' => $this->input->post( 'first_name' ),
 			'last_name'  => $this->input->post( 'last_name' ),
-			'gender'    => $this->input->post( 'gender' ),
-			'address'   => $this->input->post( 'address' ),
-			'dob'       => $this->input->post( 'dob' ),
-			//piggyback the owner user_id from the server session - relationship source of truth
-			'user_id'   => $this->session_user['id'],
+			'gender'     => $this->input->post( 'gender' ),
+			'address'    => $this->input->post( 'address' ),
+			'dob'        => $this->input->post( 'dob' ),
+			//piggyback the owner user_id from the server session
+			'user_id'    => $this->session_user['id'],
 		);
 
-		if ( ! empty( $_FILES['photo']['name'] ) ) {
+		if ( ! empty( $_FILES['photo']['name'] ) )
+		{
 			$upload        = $this->_do_upload();
 			$data['photo'] = $upload;
 		}
 
-		$insert = $this->person->save( $data );
+		$this->person->save( $data );
 
-		echo json_encode( array( "status" => true ) );
+		echo json_encode( array( "status" => TRUE ) );
 	}
+	// fields validation
+	private function _validate() {
+		$data                 = array();
+		$data['error_string'] = array();
+		$data['inputerror']   = array();
+		$data['status']       = TRUE;
 
-	public function ajax_update() {
-		$this->_validate();
-		$data = array(
-			'first_name' => $this->input->post( 'first_name' ),
-			'last_name'  => $this->input->post( 'last_name' ),
-			'gender'    => $this->input->post( 'gender' ),
-			'address'   => $this->input->post( 'address' ),
-			'dob'       => $this->input->post( 'dob' ),
-			// snatch the owner user id here, no point in bringing it out to client - relationship source of truth
-			'user_id'   => $this->session_user['id'],
-		);
-
-		if ( $this->input->post( 'remove_photo' ) ) // on remove image checked
+		if ( $this->input->post( 'first_name' ) == '' )
 		{
-			if ( file_exists( 'upload/' . $this->input->post( 'remove_photo' ) ) && $this->input->post( 'remove_photo' ) ) {
-				unlink( 'upload/' . $this->input->post( 'remove_photo' ) );
-			}
-			$data['photo'] = '';
+			$data['inputerror'][]   = 'first_name';
+			$data['error_string'][] = 'First name is required';
+			$data['status']         = FALSE;
 		}
 
-		if ( ! empty( $_FILES['photo']['name'] ) ) { // point of upload
-			$upload = $this->_do_upload();
-
-			//delete file
-			$person = $this->person->get_by_id( $this->input->post( 'id' ) );
-			if ( file_exists( 'upload/' . $person->photo ) && $person->photo ) {
-				unlink( 'upload/' . $person->photo );
-			}
-
-			$data['photo'] = $upload;
+		if ( $this->input->post( 'last_name' ) == '' )
+		{
+			$data['inputerror'][]   = 'last_name';
+			$data['error_string'][] = 'Last name is required';
+			$data['status']         = FALSE;
 		}
 
-		$this->person->update( array( 'id' => $this->input->post( 'id' ) ), $data );
-		echo json_encode( array( "status" => true ) );
+		if ( $this->input->post( 'dob' ) == '' )
+		{
+			$data['inputerror'][]   = 'dob';
+			$data['error_string'][] = 'Date of Birth is required';
+			$data['status']         = FALSE;
+		}
+
+		if ( $this->input->post( 'gender' ) == '' )
+		{
+			$data['inputerror'][]   = 'gender';
+			$data['error_string'][] = 'Please select gender';
+			$data['status']         = FALSE;
+		}
+
+		if ( $this->input->post( 'address' ) == '' )
+		{
+			$data['inputerror'][]   = 'address';
+			$data['error_string'][] = 'Addess is required';
+			$data['status']         = FALSE;
+		}
+
+		if ( $data['status'] === FALSE )
+		{
+			echo json_encode( $data );
+			exit();
+		}
 	}
-
-	public function ajax_delete( $id ) {
-		//delete file
-		$person = $this->person->get_by_id( $id );
-		if ( file_exists( 'upload/' . $person->photo ) && $person->photo ) {
-			unlink( 'upload/' . $person->photo );
-		}
-
-		$this->person->delete_by_id( $id );
-		echo json_encode( array( "status" => true ) );
-	}
-
+	// photo upload
 	private function _do_upload() {
 		$config['upload_path']   = 'upload/';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']      = 100; //max size allowed in kb
+		$config['max_size']      = 500; //max size allowed in kb
 		$config['max_width']     = 1000; // max width  allowed
 		$config['max_height']    = 1000; // max height allowed
-		$config['file_name']     = round( microtime( true ) * 1000 ); // can't beat micro-second  time-stamps for
-		// uniqueness
+		$config['file_name']     = round( microtime( TRUE ) * 1000 );
+		// can't beat micro-second time-stamps for uniqueness
 
 		$this->load->library( 'upload', $config );
 
@@ -164,7 +178,7 @@ class Person extends CI_Controller {
 		{
 			$data['inputerror'][]   = 'photo';
 			$data['error_string'][] = 'Upload error: ' . $this->upload->display_errors( '', '' ); //show ajax error
-			$data['status']         = false;
+			$data['status']         = FALSE;
 			echo json_encode( $data );
 			exit();
 		}
@@ -172,46 +186,55 @@ class Person extends CI_Controller {
 		return $this->upload->data( 'file_name' );
 	}
 
-	private function _validate() {
-		$data                 = array();
-		$data['error_string'] = array();
-		$data['inputerror']   = array();
-		$data['status']       = true;
+	public function ajax_update() {
+		$this->_validate();
+		$data = array(
+			'first_name' => $this->input->post( 'first_name' ),
+			'last_name'  => $this->input->post( 'last_name' ),
+			'gender'     => $this->input->post( 'gender' ),
+			'address'    => $this->input->post( 'address' ),
+			'dob'        => $this->input->post( 'dob' ),
 
-		if ( $this->input->post( 'first_name' ) == '' ) {
-			$data['inputerror'][]   = 'first_name';
-			$data['error_string'][] = 'First name is required';
-			$data['status']         = false;
+			'user_id'    => $this->session_user['id'],
+		);
+
+		if ( $this->input->post( 'remove_photo' ) ) // on remove image checked
+		{
+			if ( file_exists( 'upload/' . $this->input->post( 'remove_photo' ) ) && $this->input->post( 'remove_photo' ) )
+			{
+				unlink( 'upload/' . $this->input->post( 'remove_photo' ) );
+			}
+			$data['photo'] = '';
 		}
 
-		if ( $this->input->post( 'last_name' ) == '' ) {
-			$data['inputerror'][]   = 'last_name';
-			$data['error_string'][] = 'Last name is required';
-			$data['status']         = false;
+		if ( ! empty( $_FILES['photo']['name'] ) )
+		{
+			$upload = $this->_do_upload();
+
+			//delete file
+			$person = $this->person->get_by_id( $this->input->post( 'id' ) );
+			if ( file_exists( 'upload/' . $person->photo ) && $person->photo )
+			{
+				unlink( 'upload/' . $person->photo );
+			}
+
+			$data['photo'] = $upload;
 		}
 
-		if ( $this->input->post( 'dob' ) == '' ) {
-			$data['inputerror'][]   = 'dob';
-			$data['error_string'][] = 'Date of Birth is required';
-			$data['status']         = false;
+		$this->person->update( array( 'id' => $this->input->post( 'id' ) ), $data );
+		echo json_encode( array( "status" => TRUE ) );
+	}
+
+	public function ajax_delete( $id ) {
+		//delete file
+		$person = $this->person->get_by_id( $id );
+		if ( file_exists( 'upload/' . $person->photo ) && $person->photo )
+		{
+			unlink( 'upload/' . $person->photo );
 		}
 
-		if ( $this->input->post( 'gender' ) == '' ) {
-			$data['inputerror'][]   = 'gender';
-			$data['error_string'][] = 'Please select gender';
-			$data['status']         = false;
-		}
-
-		if ( $this->input->post( 'address' ) == '' ) {
-			$data['inputerror'][]   = 'address';
-			$data['error_string'][] = 'Addess is required';
-			$data['status']         = false;
-		}
-
-		if ( $data['status'] === false ) {
-			echo json_encode( $data );
-			exit();
-		}
+		$this->person->delete_by_id( $id );
+		echo json_encode( array( "status" => TRUE ) );
 	}
 
 }

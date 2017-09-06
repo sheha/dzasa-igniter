@@ -18,7 +18,7 @@ class Auth_model extends CI_Model {
 	 * and return the session object with account data if found, otherwise
 	 * returns 'account disabled' or 'account doesn't exist'
 	 */
-	public function Authentification() {
+	public function Authenticate() {
 
 		$notif    = array();
 		$email    = $this->input->post( 'email' );

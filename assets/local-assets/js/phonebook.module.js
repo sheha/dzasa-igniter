@@ -1,13 +1,22 @@
 /*
- * Handles crud traffic from and off the client-side.
+ * Module that handles crud traffic on and off the client-side,
+ * defines datatable, and keeps the DOM alive.
+ * author: @sheha
  */
-
-var crudMethod, table; // init globs
-//console.log(baseUrl);
+var reloadTable;
 $(document).ready(function() {
 
+  // declare vars at the top, ECMA rules
+  var crudMethod, table,
+
+      reloadTable = function() {
+        table.ajax.reload();
+      };
+
+  $(".dropdown-toggle").dropdown();
+
   this.addPerson = function() {
-    debugger;
+    // debugger;
     crudMethod = 'add';
     $('#form')[0].reset(); // reset modals
     $('.form-group').removeClass('has-error'); // clr errors
@@ -37,24 +46,26 @@ $(document).ready(function() {
             $('[name="last_name"]').val(data.last_name);
             $('[name="gender"]').val(data.gender);
             $('[name="address"]').val(data.address);
-            $('[name="dob"]').on("dp.change", function (e) {
 
+            // datepicker is a special snowflake
+            $('[name="dob"]').on('dp.change', function(e) {
               data.dob = new Date(e.date);
-              $('.datetimepicker').data("DateTimePicker").date(data.dob);
+              $('.datetimepicker').data('DateTimePicker').date(data.dob);
             });
+
             $('#modal_form').modal('show'); // wait for everyone to get aboard
             $('.modal-title').text('Edit Person');
 
             $('#photo-preview').show(); // lift off
 
-            if (data.photo) {
-              $('#label-photo').text('Change Photo'); // label photo upload
+            if (data.photo) { //photo actions, self-explanatory
+              $('#label-photo').text('Change Photo');
               $('#photo-preview div').
                   html('<img src="' + base_url + 'upload/' + data.photo +
-                      '" class="img-responsive">'); // show photo
+                      '" class="img-responsive">');
               $('#photo-preview div').
                   append('<input type="checkbox" name="remove_photo" value="' +
-                      data.photo + '"/> Remove photo when saving'); // remove photo
+                      data.photo + '"/> Remove photo when saving');
             }
             else {
               $('#label-photo').text('Upload Photo'); // label photo upload
@@ -63,18 +74,22 @@ $(document).ready(function() {
 
           },
           error: function() {
-            debugger;
+            debugger; // primitive error output, substantial for this project
             console.log('ERR ->editPerson');
           },
         }
     );
   };
+  /*
+   *Save func - does `create` or `update` in the db, depending on the crudMethod
+   *  defined in the addPerson and editPerson.
+   */
 
   this.save = function() {
 
-    var url;
-    $('#btnSave').text('saving...'); //change button text
-    $('#btnSave').attr('disabled', true); //set button disable
+    var url, formData;
+    $('#btnSave').text('saving...');
+    $('#btnSave').attr('disabled', true);
 
     if (crudMethod === 'add') {
       url = baseUrl + 'person/ajax_add';
@@ -83,7 +98,7 @@ $(document).ready(function() {
       url = baseUrl + 'person/ajax_update';
     }
 
-    var formData = new FormData($('#form')[0]);
+    formData = new FormData($('#form')[0]);
     $.ajax({
       url: url,
       type: 'POST',
@@ -93,20 +108,20 @@ $(document).ready(function() {
       dataType: 'JSON',
       success: function(data) {
 
-        if (data.status) //if success close modal and reload ajax table
+        if (data.status) //on success: close modal, reload table
         {
           $('#modal_form').modal('hide');
-          this.reloadTable();
+          reloadTable();
         }
         else {
           for (var i = 0; i < data.inputerror.length; i++) {
             $('[name="' + data.inputerror[i] + '"]').
-                parent().
-                parent().
-                addClass('has-error'); //select parent twice to select div form-group class and add has-error class
+                parent().// select parent twice to select div form-group
+            parent().// class and add has-error class
+            addClass('has-error');
             $('[name="' + data.inputerror[i] + '"]').
-                next().
-                text(data.error_string[i]); //select span help-block class set text error string
+                next().// select span help-block
+            text(data.error_string[i]); // to set error string
           }
         }
         $('#btnSave').text('save');
@@ -115,18 +130,16 @@ $(document).ready(function() {
       },
       error: function() {
 
-        debugger;
+        // debugger;
         console.log('ERR -> save');
-        $('#btnSave').text('save'); //change button text
-        $('#btnSave').attr('disabled', false); //set button enable
+        $('#btnSave').text('save');
+        $('#btnSave').attr('disabled', false);
 
       },
     });
   };
 
-
-
-  this.deletePerson = function() {
+  this.deletePerson = function(id) {
 
     if (confirm('Are you sure to delete this data?')) {
       $.ajax({
@@ -146,43 +159,39 @@ $(document).ready(function() {
     }
   };
 
+  /*
+   * Datatable init and build
+   */
   table = $('#table').DataTable({
 
-    'processing': true, //Feature control the processing indicator.
-    'serverSide': true, //Feature control DataTables' server-side processing mode.
-    'order': [], //Initial no order.
+    'processing': true,
+    'serverSide': true,
+    'order': [],
 
-    // Load data for the table's content from an Ajax source
     'ajax': {
       'url': baseUrl + 'person/ajax_list',
-      'type': 'POST',
+      'type': 'POST'
     },
 
-    //Set column definition initialisation properties.
     'columnDefs': [
       {
-        'targets': [-1], //last column
-        'orderable': false, //set not orderable
+        'targets': [-1],
+        'orderable': false
       },
       {
-        'targets': [-2], //2 last column (photo)
-        'orderable': false, //set not orderable
-      },
-    ],
+        'targets': [-2],
+        'orderable': false
+      }
+    ]
 
   });
 
-  this.reloadTable = function() {
-    table.ajax.reload(null, false); //reload datatable ajax
-  };
-
-  //datepicker
-
+  // register and prep datepicker
   $('.datetimepicker').datetimepicker({
-    format: 'YYYY-MM-DD',
+    format: 'YYYY-MM-DD'
   });
 
-  //set input/textarea/select event when change value, remove class error and remove text help block
+  // those annoying error masks
   $('input').change(function() {
     $(this).parent().parent().removeClass('has-error');
     $(this).next().empty();
@@ -197,5 +206,4 @@ $(document).ready(function() {
   });
 
 });
-
 

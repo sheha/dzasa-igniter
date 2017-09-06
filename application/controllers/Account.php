@@ -1,9 +1,8 @@
-<?php
-
-defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
+<?php defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
 
 /*
- *  Account Controller class: basic account management
+ * Account Controller: basic account management
+ * author: @sheha
  */
 
 class Account extends CI_Controller {
@@ -14,7 +13,8 @@ class Account extends CI_Controller {
 		parent::__construct();
 
 		Utils::no_cache();
-		if ( ! $this->session->userdata( 'logged_in' ) ) {
+		if ( ! $this->session->userdata( 'logged_in' ) )
+		{
 			redirect( base_url( 'auth/login' ) );
 			exit;
 		}

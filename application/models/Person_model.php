@@ -1,9 +1,9 @@
 <?php defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
-
 /*
- * Person model, or plainly, model of one record in our phonebook.
- * Defines the getter and setters method for the
- * entry in the phonebook.
+ * Person model, or everything one Phonebook entry can care about.
+ * Mainly defines the table layout,  CRUD op set, builds the actual query on the client input.
+ *
+ * author: @sheha
  */
 
 class Person_model extends CI_Model {
@@ -32,11 +32,12 @@ class Person_model extends CI_Model {
 	/*
 	 * helper for populating datatable
 	 */
-	private function _get_datatables_query( $user_id  ) {
+	private function _get_datatables_query( $user_id = null ) {
 
-		$this->db->select('*');
 		$this->db->from( $this->table );
-		$this->db->where( 'user_id', $user_id );
+		if ( isset ( $user_id ) ) {
+			$this->db->where( 'user_id', $user_id );
+		}
 
 		$i = 0; // like every good counter, has to re/start somewhere
 
@@ -47,10 +48,10 @@ class Person_model extends CI_Model {
 
 				if ( $i === 0 ) // first loop
 				{
-					$this->db->group_start(); // query builder start
+					$this->db->group_start(); // query builder group start
 					$this->db->like( $item, $this->input->post['search']['value'] ); // first filter applied
 				} else {
-					$this->db->or_like( $item, $this->input->post['search']['value'] ); // concat current with previous filter
+					$this->db->or_like( $item, $this->input->post['search']['value'] );
 					// clause
 				}
 
@@ -62,7 +63,7 @@ class Person_model extends CI_Model {
 			$i ++;
 		}
 
-		if ( isset( $this->input->post['order'] ) ) // order processing
+		if ( isset( $this->input->post['order'] ) ) // order processing turned OFF
 		{
 
 			$this->db->order_by( $this->column_order[ $this->input->post['order']['0']['column'] ], $this->input->post['order']['0']['dir'] );
@@ -75,7 +76,7 @@ class Person_model extends CI_Model {
 	}
 
 	/*
-	 * Retrieves the populated datatable
+	 * Main getter for the datatable on the client
 	 */
 	function get_datatables( $user_id ) {
 		$this->_get_datatables_query( $user_id );
@@ -89,18 +90,14 @@ class Person_model extends CI_Model {
 
 	function count_filtered() {
 		$this->_get_datatables_query();
-		$query = $this->db->get();
-
-		return $query->num_rows();
+		return $query = $this->db->count_all_results();
 	}
 
-	/*
-	 * C.R.U.D. helpers designed to be invoked from the Person controller
-	 */
-
 	public function count_all( $id ) {
+		$this->db->select('id');
 		$this->db->from( $this->table );
-		$this->db->where( 'id', $id );
+		$this->db->where( 'user_id', $id );
+
 		return $this->db->count_all_results();
 	}
 
@@ -112,6 +109,9 @@ class Person_model extends CI_Model {
 		return $query->row();
 	}
 
+	/*
+	 * C.R.U.D. helpers for the Person controller
+	 */
 	public function save( $data ) {
 		$this->db->insert( $this->table, $data );
 
@@ -128,7 +128,7 @@ class Person_model extends CI_Model {
 		$this->db->where( 'id', $id );
 		$this->db->delete( $this->table );
 	}
-
+	// Compares the original owner id in the DB with the one stored in session
 	public function verify_relation( $id, $email ){
 		$this->db->select('id');
 		$this->db->from('users');

@@ -1,4 +1,4 @@
-
+<!--@: sheha-->
 <body>
 <!-- container -->
 <div class="container">
@@ -6,8 +6,8 @@
 
     <h3>Person Info</h3>
     <br/>
-    <button class="btn btn-success" onclick="addPerson()"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
-    <button class="btn btn-default" onclick="reloadTable()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
+    <button class="btn btn-success" onclick="addPerson();"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
+    <button class="btn btn-default" onclick="reloadTable();"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
     <br/>
     <br/>
     <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -39,7 +39,7 @@
     </table>
 
     <footer>
-        <p>&copy; No Copyright. Freeworld citizen Ismar Sehic <?php echo date('Y'); ?></p>
+        <p>&copy; No Copyright. Freeworld Citizen Ismar Sehic <?php echo date( 'Y' ); ?></p>
     </footer>
 
 </div>
@@ -101,7 +101,7 @@
                         <div class="form-group" id="photo-preview">
                             <label class="control-label col-md-3">Photo</label>
                             <div class="col-md-9">
-                                (No photo)
+                                (No photo) (1000 x 1000, max 500kb)
                                 <span class="help-block"></span>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" id="btnSave" onclick="save()" class="btn btn-primary">Save</button>
+                <button type="button" id="btnSave" onclick="save();" class="btn btn-primary">Save</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
         </div><!-- /.modal-content -->

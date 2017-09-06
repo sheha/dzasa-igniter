@@ -1,3 +1,4 @@
+<!--@: sheha-->
 <!doctype html>
 <!--[if lt IE 7]>
 <html ng-app="epam" class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""/> <![endif]-->
@@ -38,8 +39,10 @@
           href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
 <script type="text/javascript">
   var baseUrl = '<?php echo base_url(); ?>';
 </script>
+
 </head>
 <body>

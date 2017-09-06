@@ -1,7 +1,15 @@
-<?php
+<?php defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
 
-defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
-
+/*
+ * Auth controller, does user administration.
+ * Responsibilities: authenticates, register new users, generates new password if forgotten,
+ * updates password,emails it to user, logs the user out.
+ *
+ * Pass storage security: sha1 hash.
+ *
+ * author: @sheha
+ *
+ */
 class Auth extends CI_Controller {
 
 	function __construct() {
@@ -25,16 +33,19 @@ class Auth extends CI_Controller {
 		$data['title'] = 'Login';
 		$this->load->model( 'auth_model' );
 
-		if ( count( $this->input->post() ) ) {
+		if ( count( $this->input->post() ) )
+		{
 			$this->load->helper( 'security' );
 			$this->form_validation->set_rules( 'email', 'Email address', 'trim|required|valid_email|xss_clean' );
 			$this->form_validation->set_rules( 'password', 'Password', 'trim|required|xss_clean' );
 
-			if ( $this->form_validation->run() == false ) {
+			if ( $this->form_validation->run() == FALSE )
+			{
 				$data['notif']['message'] = validation_errors();
 				$data['notif']['type']    = 'danger';
-			} else {
-				$data['notif'] = $this->auth_model->Authentification();
+			} else
+			{
+				$data['notif'] = $this->auth_model->Authenticate();
 			}
 		}
 
@@ -53,7 +64,8 @@ class Auth extends CI_Controller {
 		$data['title'] = 'Register';
 		$this->load->model( 'auth_model' );
 
-		if ( count( $this->input->post() ) ) {
+		if ( count( $this->input->post() ) )
+		{
 			$this->load->helper( 'security' );
 
 			$this->form_validation->set_rules( 'first_name', 'First name', 'trim|required' );
@@ -63,16 +75,19 @@ class Auth extends CI_Controller {
 			$this->form_validation->set_rules( 'password', 'Password', 'trim|required' );
 			$this->form_validation->set_rules( 'confirm_password', 'Password', 'trim|required|matches[password]|min_length[6]|alpha_numeric|callback_password_check' );
 
-			if ( $this->form_validation->run() == false ) {
+			if ( $this->form_validation->run() == FALSE )
+			{
 				$data['notif']['message'] = validation_errors();
 				$data['notif']['type']    = 'danger';
-			} else {
+			} else
+			{
 				$data['notif'] = $this->auth_model->register();
 				redirect( base_url( 'auth/login' ) );
 			}
 		}
 
-		if ( $this->session->userdata( 'logged_in' ) ) {
+		if ( $this->session->userdata( 'logged_in' ) )
+		{
 			redirect( base_url( 'person' ) );
 			exit;
 		}
@@ -90,30 +105,35 @@ class Auth extends CI_Controller {
 		$this->load->model( 'auth_model' );
 
 
-		if ( count( $this->input->post() ) ) {
+		if ( count( $this->input->post() ) )
+		{
 
 			$this->load->helper( 'security' );
 			$this->form_validation->set_rules( 'email', 'Email', 'trim|required|valid_email' );
 
-			if ( $this->form_validation->run() == false ) {
+			if ( $this->form_validation->run() == FALSE )
+			{
 
 				$data['notif']['message'] = validation_errors();
 				$data['notif']['type']    = 'danger';
 
-			} else {
+			} else
+			{
 
 				$result = $this->auth_model->check_email( $this->input->post( 'email' ) );
 
-				if ( $result ) {
+				if ( $result )
+				{
 
 					$new_password = $this->random_password();
 
-					$mail = $this->password_recovery_email($this->input->post( 'email' ), $new_password);
+					$mail = $this->password_recovery_email( $this->input->post( 'email' ), $new_password );
 
-					$this->auth_model->change_password($this->input->post( 'email' ), $new_password);
+					$this->auth_model->change_password( $this->input->post( 'email' ), $new_password );
 					$data['notif']['message'] = 'Sending email with your new password.Check your inbox shortly.';
 					$data['notif']['type']    = 'success';
-				} else {
+				} else
+				{
 					$data['notif']['message'] = 'This email does not exist in the system!';
 					$data['notif']['type']    = 'danger';
 				}
@@ -125,34 +145,47 @@ class Auth extends CI_Controller {
 
 	}
 
-	public function password_recovery_email( $user_email, $new_password ){
+	private function random_password() {
+		$alphabet     = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+		$password     = array();
+		$alpha_length = strlen( $alphabet ) - 1;
+		for ( $i = 0; $i < 8; $i ++ )
+		{
+			$n          = rand( 0, $alpha_length );
+			$password[] = $alphabet[$n];
+		}
+
+		return implode( $password );
+	}
+
+	public function password_recovery_email( $user_email, $new_password ) {
 
 		// loads up the phpmailer based CI extension
 		// ( https://github.com/ivantcholakov/codeigniter-phpmailer )
-		$this->load->library('email');
+		$this->load->library( 'email' );
 
 
-		$subject = 'Phonebook.dev Password Recovery';
-		$message = 'Your new password for phonebook.dev site:  ' . $new_password;
-		$email_body = $this->email->full_html($subject, $message);
+		$subject    = 'Phonebook.dev Password Recovery';
+		$message    = 'Your new password for phonebook.dev site:  ' . $new_password;
+		$email_body = $this->email->full_html( $subject, $message );
 
-		$result = $this->email->from('cihseramsi@gmail.com')->reply_to('i.sheeha@gmail.com')
-															->to($user_email)
-															->subject($subject)
-															->message($email_body)->send();
+		$result = $this->email->from( 'cihseramsi@gmail.com' )->reply_to( 'i.sheeha@gmail.com' )
+							  ->to( $user_email )
+							  ->subject( $subject )
+							  ->message( $email_body )->send();
+
 		return $result;
 
 	}
 
-
 	public function password_check( $str ) {
-		if ( preg_match( '#[0-9]#', $str ) && preg_match( '#[a-zA-Z]#', $str ) ) {
-			return true;
+		if ( preg_match( '#[0-9]#', $str ) && preg_match( '#[a-zA-Z]#', $str ) )
+		{
+			return TRUE;
 		}
 
-		return false;
+		return FALSE;
 	}
-
 
 	public function logout() {
 		$this->session->unset_userdata( 'logged_in' );
@@ -160,19 +193,6 @@ class Auth extends CI_Controller {
 		$this->output->set_header( "Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0" );
 		$this->output->set_header( "Pragma: no-cache" );
 		redirect( base_url( 'auth/login' ) );
-	}
-
-	private function random_password()
-	{
-		$alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-		$password = array();
-		$alpha_length = strlen($alphabet) - 1;
-		for ($i = 0; $i < 8; $i++)
-		{
-			$n = rand(0, $alpha_length);
-			$password[] = $alphabet[$n];
-		}
-		return implode($password);
 	}
 
 
